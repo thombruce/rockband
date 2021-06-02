@@ -1,0 +1,17 @@
+{
+  "name": "@thombruce/tnt",
+  "version": "0.1.0",
+  "description": "My personal component library for Nuxt.js",
+  "main": "src/index.js",
+  "repository": "https://github.com/thombruce/tnt",
+  "author": "Thom Bruce <thom@thombruce.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@nuxtjs/color-mode": "^2.0.9",
+    "@nuxtjs/tailwindcss": "^4.1.2",
+    "@tailwindcss/forms": "^0.3.2",
+    "postcss": "^8.3.0",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0"
+  }
+}
