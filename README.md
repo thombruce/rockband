@@ -3,7 +3,7 @@
 Add TNT's peer dependencies then add TNT:
 
 ```sh
-yarn add @nuxtjs/tailwindcss @tailwindcss/forms --dev
+yarn add @nuxtjs/tailwindcss --dev
 yarn add https://github.com/thombruce/tnt --dev
 ```
 
@@ -14,28 +14,6 @@ buildModules: [
   '@nuxtjs/tailwindcss',
   '@thombruce/tnt'
 ]
-```
-
-Create a `tailwind.config.js` file in the root of your project. Here's an example (the important parts are `darkMode` and `plugins`):
-
-```js
-module.exports = {
-  purge: {
-    content: [
-      'content/**/*.md'
-    ]
-  },
-  darkMode: 'class',
-  theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [
-    require('@tailwindcss/forms'),
-  ],
-}
 ```
 
 ## Todo

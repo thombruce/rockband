@@ -23,6 +23,12 @@ export default async function () {
 
   // TODO: This might help...
   // this.addModule('@nuxtjs/tailwindcss')
+
+  this.nuxt.hook('tailwindcss:config', function (tailwindConfig) {
+    tailwindConfig.purge.content.push('content/**/*.md')
+    tailwindConfig.darkMode = 'class'
+    tailwindConfig.plugins.push(require('@tailwindcss/forms'))
+  })
   // NOTE: Each of these then also has additional config on top.
   //       We should try working these out one at a time, say...
   //       fontawesome, then color-mode, then tailwind (the hard one).
