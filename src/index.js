@@ -22,7 +22,7 @@ export default async function () {
   await this.addModule('@nuxtjs/fontawesome')
 
   // TODO: This might help...
-  // this.addModule('@nuxtjs/tailwindcss')
+  await this.addModule('@nuxtjs/tailwindcss')
 
   this.nuxt.hook('tailwindcss:config', function (tailwindConfig) {
     tailwindConfig.purge.content.push('content/**/*.md')
