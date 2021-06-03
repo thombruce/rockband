@@ -3,7 +3,7 @@
 Add TNT's peer dependencies then add TNT:
 
 ```sh
-yarn add @nuxtjs/color-mode @nuxtjs/tailwindcss @tailwindcss/forms postcss @nuxtjs/fontawesome @fortawesome/free-solid-svg-icons --dev
+yarn add @nuxtjs/color-mode @nuxtjs/tailwindcss @tailwindcss/forms @nuxtjs/fontawesome @fortawesome/free-solid-svg-icons --dev
 yarn add https://github.com/thombruce/tnt --dev
 ```
 

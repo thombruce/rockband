@@ -8,7 +8,11 @@
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@nuxtjs/fontawesome": "^1.1.2",
+    "consola": "^2.15.3",
     "lodash": "^4.17.21",
+    "postcss": "^8.3.0",
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.1.0",
     "simple-icons": "^5.0.0"
@@ -16,7 +20,6 @@
   "peerDependencies": {
     "@nuxtjs/color-mode": "^2.0.9",
     "@nuxtjs/tailwindcss": "^4.1.2",
-    "@tailwindcss/forms": "^0.3.2",
-    "postcss": "^8.3.0"
+    "@tailwindcss/forms": "^0.3.2"
   }
 }
