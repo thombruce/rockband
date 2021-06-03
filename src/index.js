@@ -21,31 +21,23 @@ export default async function () {
   }
   await this.addModule('@nuxtjs/fontawesome')
 
-  // TODO: This might help...
   await this.addModule('@nuxtjs/tailwindcss')
-
   this.nuxt.hook('tailwindcss:config', function (tailwindConfig) {
     tailwindConfig.purge.content.push('content/**/*.md')
     tailwindConfig.darkMode = 'class'
     tailwindConfig.plugins.push(require('@tailwindcss/forms'))
   })
-  // NOTE: Each of these then also has additional config on top.
-  //       We should try working these out one at a time, say...
-  //       fontawesome, then color-mode, then tailwind (the hard one).
-  //       And we still need to work out how to pass options to these...
-  //
-  //       The docs suggest that the modules:before hook is...
-  //       "useful to overload methods and options."
-  //       So start there maybe.
-  //
-  // DOCS: https://nuxtjs.org/docs/2.x/internals-glossary/internals-module-container
 
   this.nuxt.hook('modules:before', () => {
-    console.log('modules here!!!')
+    //
   })
 
   this.nuxt.hook('build:before', () => {
-    console.log('build here!!!')
+    //
+  })
+
+  this.extendBuild(config => {
+    //
   })
 
   this.nuxt.hook("components:dirs", (dirs) => {
