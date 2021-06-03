@@ -3,32 +3,17 @@
 Add TNT's peer dependencies then add TNT:
 
 ```sh
-yarn add @nuxtjs/color-mode @nuxtjs/tailwindcss @tailwindcss/forms @nuxtjs/fontawesome @fortawesome/free-solid-svg-icons --dev
+yarn add @nuxtjs/tailwindcss @tailwindcss/forms --dev
 yarn add https://github.com/thombruce/tnt --dev
 ```
 
-Add Tailwind, Color Mode and TNT to buildModules:
+Add Tailwind and TNT to buildModules:
 
 ```js
 buildModules: [
   '@nuxtjs/tailwindcss',
-  '@nuxtjs/color-mode',
-  '@nuxtjs/fontawesome',
   '@thombruce/tnt'
-],
-// ...
-colorMode: {
-  classSuffix: ''
-},
-// ...
-fontawesome: {
-  component: 'fa',
-  icons: {
-    // regular: true,
-    solid: [],
-    // brands: true,
-  }
-},
+]
 ```
 
 Create a `tailwind.config.js` file in the root of your project. Here's an example (the important parts are `darkMode` and `plugins`):
