@@ -1,8 +1,6 @@
 
 import { join } from 'path'
 
-import tailwindConfig from './tailwind.config'
-
 export default function () {
   const { nuxt } = this
 
@@ -12,16 +10,7 @@ export default function () {
   }
 
   this.nuxt.hook('build:before', () => {
-    nuxt.options.buildModules.push('@nuxtjs/tailwindcss')
-    nuxt.options.buildModules.push('@nuxtjs/color-mode')
-
-    nuxt.options.colorMode = {
-      classSuffix: ''
-    }
-
-    nuxt.options.tailwindcss = {
-      config: tailwindConfig
-    }
+    //
   })
 
   this.nuxt.hook("components:dirs", (dirs) => {
