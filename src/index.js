@@ -9,15 +9,20 @@ export default async function () {
     throw new Error('please set `components: true` inside `nuxt.config` and ensure using `nuxt >= 2.13.0`')
   }
 
+  nuxt.options.colorMode = {
+    ...{ classSuffix: '' },
+    ...nuxt.options.colorMode
+  }
+  await this.addModule('@nuxtjs/color-mode')
+
   nuxt.options.fontawesome = {
     ...{ component: 'fa', icons: { solid: [] } },
     ...nuxt.options.fontawesome
   }
+  await this.addModule('@nuxtjs/fontawesome')
 
   // TODO: This might help...
   // this.addModule('@nuxtjs/tailwindcss')
-  // this.addModule('@nuxtjs/color-mode')
-  await this.addModule('@nuxtjs/fontawesome')
   // NOTE: Each of these then also has additional config on top.
   //       We should try working these out one at a time, say...
   //       fontawesome, then color-mode, then tailwind (the hard one).
