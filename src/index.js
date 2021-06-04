@@ -66,17 +66,17 @@ export default async function () {
   })
 
   // Currently broken - cannot load components.
-  // if (!fs.existsSync("layouts/default.vue")) { // If exists, overwrites...
-  //   this.addLayout({
-  //     name: 'default',
-  //     src: join(__dirname, "layouts/default.vue")
-  //   })
-  // }
+  if (!fs.existsSync("layouts/default.vue")) { // If exists, overwrites...
+    this.addLayout({
+      name: 'default',
+      src: join(__dirname, "layouts/default.vue")
+    })
+  }
 
-  // if (!fs.existsSync("layouts/error.vue")) { // If exists, overwrites...
-  //   this.addLayout({
-  //     name: 'error',
-  //     src: join(__dirname, "layouts/error.vue")
-  //   })
-  // }
+  if (!fs.existsSync("layouts/error.vue")) { // If exists, overwrites...
+    this.addLayout({
+      name: 'error',
+      src: join(__dirname, "layouts/error.vue")
+    })
+  }
 }
