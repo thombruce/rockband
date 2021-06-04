@@ -2,7 +2,7 @@
 header.justify-center
   span
     NuxtLink(to='/') {{ title }}
-  TntDarkmodeToggle
+  TntUIDarkmodeToggle
 </template>
 
 <script>
