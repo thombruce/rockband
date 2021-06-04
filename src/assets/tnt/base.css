@@ -1,0 +1,103 @@
+body {
+  @apply bg-gray-50 text-gray-800 dark:bg-primary-900 dark:text-gray-50;
+}
+
+article a {
+  @apply text-red-600 hover:text-red-800 dark:text-red-500 dark:hover:text-red-700;
+}
+
+article header {
+  & a {
+    @apply text-blue-500 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-700;
+  }
+  & time {
+    @apply text-blue-400;
+  }
+}
+
+/* Header Elements */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold;
+}
+
+h1 {
+  @apply text-2xl;
+}
+
+h2 {
+  @apply text-xl;
+}
+
+h3 {
+  @apply text-lg;
+}
+
+h4 {
+  @apply text-lg;
+}
+
+h5 {
+  @apply text-lg;
+}
+
+h6 {
+  @apply text-lg;
+}
+/* End Header Elements*/
+
+[type='text'],
+[type='email'],
+[type='url'],
+[type='password'],
+[type='number'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='week'],
+[multiple],
+textarea,
+select {
+  @apply bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-50;
+}
+
+.nuxt-content {
+  @apply break-words;
+
+  & h1, & h2, & h3, & h4, & h5, & h6 {
+    @apply mb-2;
+  }
+
+  & p {
+    @apply mb-4;
+  }
+
+  & table {
+    @apply block table-fixed text-center overflow-x-auto pb-4;
+    & th, & td {
+      @apply px-5;
+    }
+  }
+
+  & .nuxt-content-highlight {
+    @apply relative;
+
+    /* Style filename span added by @nuxt/content */
+    & > .filename {
+      @apply absolute right-0 top-0 text-gray-800 z-10 font-mono text-sm tracking-tight leading-none mr-4 mt-3;
+    }
+
+    /* Add top padding to code blocks with filename */
+    & > .filename + pre[class*="language-"] {
+      @apply pt-8;
+    }
+  }
+
+  /* Force style on pre elements */
+  & pre[class*="language-"] {
+    /* Make pre static so the relative goes to the parent (.nuxt-content-highlight) */
+    @apply static;
+  }
+}

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "My personal component library for Nuxt.js",
   "main": "src/index.js",
+  "style": "src/assets/tnt.css",
   "repository": "https://github.com/thombruce/tnt",
   "author": "Thom Bruce <thom@thombruce.com>",
   "license": "MIT",

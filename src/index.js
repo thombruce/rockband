@@ -26,6 +26,7 @@ export default async function () {
   await this.addModule('@nuxtjs/fontawesome')
 
   nuxt.options.tailwindcss = {
+    cssPath: fs.existsSync("assets/css/tnt.css") ? "~/assets/css/tnt.css" : join(__dirname, "assets/tnt.css"),
     config: {
       theme: {
         extend: {
@@ -64,17 +65,18 @@ export default async function () {
     })
   })
 
-  if (!fs.existsSync("layouts/default.vue")) { // If exists, overwrites...
-    this.addLayout({
-      name: 'default',
-      src: join(__dirname, "layouts/default.vue")
-    })
-  }
+  // Currently broken - cannot load components.
+  // if (!fs.existsSync("layouts/default.vue")) { // If exists, overwrites...
+  //   this.addLayout({
+  //     name: 'default',
+  //     src: join(__dirname, "layouts/default.vue")
+  //   })
+  // }
 
-  if (!fs.existsSync("layouts/error.vue")) { // If exists, overwrites...
-    this.addLayout({
-      name: 'error',
-      src: join(__dirname, "layouts/error.vue")
-    })
-  }
+  // if (!fs.existsSync("layouts/error.vue")) { // If exists, overwrites...
+  //   this.addLayout({
+  //     name: 'error',
+  //     src: join(__dirname, "layouts/error.vue")
+  //   })
+  // }
 }

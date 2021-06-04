@@ -13,3 +13,11 @@ buildModules: [
   '@thombruce/tnt'
 ]
 ```
+
+## Overwrite Default Styles
+
+```css
+@import "@thombruce/tnt";
+
+/* Declare your styles or local imports here. */
+```
