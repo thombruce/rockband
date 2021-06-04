@@ -59,7 +59,7 @@ export default async function () {
   this.nuxt.hook("components:dirs", (dirs) => {
     // Add ./components dir to the list
     dirs.push({
-      path: join(__dirname, "src/components"),
+      path: join(__dirname, "components"),
       prefix: "tnt",
       level: 1
     })
