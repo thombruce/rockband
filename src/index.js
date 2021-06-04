@@ -1,6 +1,10 @@
 
 import { join } from 'path'
 
+import fs from 'fs'
+
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 export default async function () {
   const { nuxt } = this
 
@@ -21,6 +25,17 @@ export default async function () {
   }
   await this.addModule('@nuxtjs/fontawesome')
 
+  nuxt.options.tailwindcss = {
+    config: {
+      theme: {
+        extend: {
+          colors: {
+            primary: defaultTheme.colors.blue
+          }
+        }
+      }
+    }
+  }
   await this.addModule('@nuxtjs/tailwindcss')
   this.nuxt.hook('tailwindcss:config', function (tailwindConfig) {
     tailwindConfig.purge.content.push('content/**/*.md')
@@ -43,9 +58,23 @@ export default async function () {
   this.nuxt.hook("components:dirs", (dirs) => {
     // Add ./components dir to the list
     dirs.push({
-      path: join(__dirname, "../src/components"),
+      path: join(__dirname, "src/components"),
       prefix: "tnt",
       level: 1
     })
   })
+
+  if (!fs.existsSync("layouts/default.vue")) { // If exists, overwrites...
+    this.addLayout({
+      name: 'default',
+      src: join(__dirname, "layouts/default.vue")
+    })
+  }
+
+  if (!fs.existsSync("layouts/error.vue")) { // If exists, overwrites...
+    this.addLayout({
+      name: 'error',
+      src: join(__dirname, "layouts/error.vue")
+    })
+  }
 }
