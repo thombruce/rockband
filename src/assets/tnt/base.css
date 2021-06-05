@@ -1,9 +1,9 @@
 body {
-  @apply bg-gray-50 text-gray-800 dark:bg-primary-900 dark:text-gray-50;
+  @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-50;
 }
 
 article a {
-  @apply text-red-600 hover:text-red-800 dark:text-red-500 dark:hover:text-red-700;
+  @apply text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700;
 }
 
 article header {
