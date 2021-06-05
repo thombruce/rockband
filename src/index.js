@@ -39,6 +39,9 @@ export default async function () {
   }
   await this.addModule('@nuxtjs/tailwindcss')
   this.nuxt.hook('tailwindcss:config', function (tailwindConfig) {
+    tailwindConfig.purge.content.push(`${join(__dirname, 'components')}/**/*.{vue,js}`)
+    tailwindConfig.purge.content.push(`${join(__dirname, 'layouts')}/**/*.vue`)
+
     tailwindConfig.purge.content.push('content/**/*.md')
     tailwindConfig.darkMode = 'class'
     tailwindConfig.plugins.push(require('@tailwindcss/forms'))
