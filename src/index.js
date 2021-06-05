@@ -3,7 +3,7 @@ import { join, resolve } from 'path'
 
 import fs from 'fs'
 
-const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
 
 export default async function () {
   const { nuxt } = this
@@ -31,7 +31,12 @@ export default async function () {
       theme: {
         extend: {
           colors: {
-            primary: defaultTheme.colors.blue
+            primary: { ...colors.blue, ...{ DEFAULT: colors.blue['500'] } },
+            secondary: { ...colors.blueGray, ...{ DEFAULT: colors.blueGray['400'] } },
+            success: { ...colors.green, ...{ DEFAULT: colors.green['500'] } },
+            danger: { ...colors.red, ...{ DEFAULT: colors.red['600'] } },
+            warning: { ...colors.yellow, ...{ DEFAULT: colors.yellow['400'] } },
+            info: { ...colors.lightBlue, ...{ DEFAULT: colors.lightBlue['300'] } }
           }
         }
       }
