@@ -1,8 +1,10 @@
 <template lang='pug'>
-header.justify-center
-  span
-    NuxtLink(to='/') {{ title }}
-  TntUIDarkmodeToggle
+header
+  div
+    span
+      NuxtLink(to='/') {{ title }}
+  div
+    TntUIDarkmodeToggle
 </template>
 
 <script>
@@ -17,7 +19,7 @@ export default {
 
 <style lang='postcss' scoped>
 header {
-  @apply flex py-5 px-4;
+  @apply flex justify-between mb-5 px-4 py-5 bg-primary-500 dark:bg-gray-800 text-white;
   & > span:first-of-type {
     @apply block font-bold pr-3 md:pr-4;
   }
