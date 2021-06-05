@@ -41,6 +41,7 @@ export default async function () {
   this.nuxt.hook('tailwindcss:config', function (tailwindConfig) {
     tailwindConfig.purge.content.push(`${join(__dirname, 'components')}/**/*.{vue,js}`)
     tailwindConfig.purge.content.push(`${join(__dirname, 'layouts')}/**/*.vue`)
+    // tailwindConfig.purge.content.push(`${join(__dirname, 'pages')}/**/*.vue`) // NOTE: This should become usable with Nuxt 3.
 
     tailwindConfig.purge.content.push('content/**/*.md')
     tailwindConfig.darkMode = 'class'
