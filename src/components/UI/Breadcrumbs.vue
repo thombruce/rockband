@@ -23,6 +23,7 @@ export default {
       const params = fullPath.startsWith('/')
         ? fullPath.substring(1).split('/')
         : fullPath.split('/')
+      params = params.filter(item => item)
       const crumbs = []
       let path = ''
       params.forEach((param, index) => {
