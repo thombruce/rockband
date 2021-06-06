@@ -19,7 +19,7 @@ export default {
 
 <style lang='postcss' scoped>
 header {
-  @apply flex justify-between mb-5 px-4 py-5 bg-primary-500 dark:bg-gray-800 text-white;
+  @apply flex justify-between mb-5 px-4 py-5 bg-primary-500 dark:bg-primary-900 text-white;
   & > span:first-of-type {
     @apply block font-bold pr-3 md:pr-4;
   }
