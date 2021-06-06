@@ -1,5 +1,5 @@
 body {
-  @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-50;
+  @apply bg-light text-dark dark:bg-dark dark:text-light;
 }
 
 article a {
