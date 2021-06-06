@@ -26,6 +26,7 @@ export default {
       const crumbs = []
       let path = ''
       params.forEach((param, index) => {
+        param = param.split('#')[0]
         path = `${path}/${param}`
         const match = this.$router.match(path)
         if (match.name !== null) {
