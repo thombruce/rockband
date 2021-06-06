@@ -20,7 +20,7 @@ export default {
     },
     crumbs () {
       const fullPath = this.$route.fullPath
-      const params = fullPath.startsWith('/')
+      let params = fullPath.startsWith('/')
         ? fullPath.substring(1).split('/')
         : fullPath.split('/')
       params = params.filter(item => item)
