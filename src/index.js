@@ -29,17 +29,28 @@ export default async function () {
     cssPath: fs.existsSync("assets/css/tnt.css") ? "~/assets/css/tnt.css" : join(__dirname, "assets/tnt.css"),
     config: {
       theme: {
-        extend: {
-          colors: {
-            primary: { ...colors.blue, ...{ DEFAULT: colors.blue['500'] } },
-            secondary: { ...colors.blueGray, ...{ DEFAULT: colors.blueGray['400'] } },
-            success: { ...colors.green, ...{ DEFAULT: colors.green['500'] } },
-            danger: { ...colors.red, ...{ DEFAULT: colors.red['600'] } },
-            warning: { ...colors.yellow, ...{ DEFAULT: colors.yellow['400'] } },
-            info: { ...colors.lightBlue, ...{ DEFAULT: colors.lightBlue['300'] } },
-            light: { ...colors.coolGray, ...{ DEFAULT: colors.coolGray['50'] } },
-            dark: { ...colors.coolGray, ...{ DEFAULT: colors.coolGray['900'] } },
-          }
+        colors: {
+          transparent: 'transparent',
+          current: 'currentColor',
+          black: colors.black,
+          white: colors.white,
+          gray: colors.coolGray,
+          red: colors.red,
+          yellow: colors.amber,
+          green: colors.emerald,
+          blue: colors.blue,
+          indigo: colors.indigo,
+          purple: colors.violet,
+          pink: colors.pink,
+          primary: { ...colors.blue, ...{ DEFAULT: colors.blue['500'] } },
+          secondary: { ...colors.blueGray, ...{ DEFAULT: colors.blueGray['400'] } },
+          neutral: { ...colors.coolGray, ...{ DEFAULT: colors.coolGray['500'] } },
+          success: { ...colors.green, ...{ DEFAULT: colors.green['500'] } },
+          danger: { ...colors.red, ...{ DEFAULT: colors.red['600'] } },
+          warning: { ...colors.yellow, ...{ DEFAULT: colors.yellow['400'] } },
+          info: { ...colors.lightBlue, ...{ DEFAULT: colors.lightBlue['300'] } },
+          light: { ...colors.coolGray, ...{ DEFAULT: colors.coolGray['50'] } },
+          dark: { ...colors.coolGray, ...{ DEFAULT: colors.coolGray['900'] } },
         }
       }
     }
