@@ -1,29 +1,86 @@
 <template lang='pug'>
 header.py-4
-  // TODO: Add support for images
-
-  dl.inline-block.mr-1(v-if='article.categories')
+  dl.inline-block.mr-1(v-if='categories.length')
     dt.sr-only Categories
-    // TODO: Allow for link paths to be passed for taxonomies
-    dd.inline-block.mr-2(v-for='category in article.categories') {{ category }}
+    dd.inline-block.mr-2(v-for='category in categories')
+      // TODO: Better handling of links for different paths
+      template(v-if='$router.match(`/blog/categories/${parameterize(category)}`).matched.length')
+        NuxtLink(:to='`/blog/categories/${parameterize(category)}`') {{ category }}
+      template(v-else) {{ category }}
 
-  dl.inline-block.mr-1(v-if='article.series')
+  dl.inline-block.mr-1(v-if='series.length')
     dt.sr-only Series
-    // TODO: Allow for link paths to be passed for taxonomies
-    dd.inline-block.mr-2(v-for='series in article.series') {{ series }}
+    dd.inline-block.mr-2(v-for='series in series')
+      // TODO: Better handling of links for different paths
+      template(v-if='$router.match(`/blog/series/${parameterize(series)}`).matched.length')
+        NuxtLink(:to='`/blog/series/${parameterize(series)}`') {{ series }}
+      template(v-else) {{ series }}
 
   h1 {{ article.title }}
 
-  dl.inline-block.mr-1(v-if='article.tags')
-    dt.sr-only Tags
-    // TODO: Allow for link paths to be passed for taxonomies
-    dd.inline-block.mr-2(v-for='tag in article.tags') {{ tag }}
+  address(v-if='authors.length')
+    dl.authors
+      dt.sr-only Authors
+      dd.inline(v-for='author in authors')
+        // TODO: Better handling of links for different paths
+        template(v-if='$router.match(`/blog/authors/${parameterize(author)}`).matched.length')
+          NuxtLink(:to='`/blog/authors/${parameterize(author)}`' rel='author') {{ author }}
+        template(v-else) {{ author }}
 
-  time.block(:datetime='article.createdAt') {{ article.createdAt }}
+  dl.inline-block.mr-1(v-if='tags.length')
+    dt.sr-only Tags
+    dd.inline-block.mr-2(v-for='tag in tags')
+      // TODO: Better handling of links for different paths
+      template(v-if='$router.match(`/blog/tags/${parameterize(tag)}`).matched.length')
+        NuxtLink(:to='`/blog/tags/${parameterize(tag)}`') {{ tag }}
+      template(v-else) {{ tag }}
+
+  time.block(pubdate :datetime='article.createdAt') {{ article.createdAt }}
+
+  NuxtImg(v-if='article.image' :src='article.image' sizes='xs:320px sm:640px md:768px')
 </template>
 
 <script>
+import { kebabCase } from 'lodash'
+
 export default {
-  props: ['article']
+  props: ['article'],
+
+  computed: {
+    categories () {
+      return this.article.categories || [this.article.category].flat()
+    },
+    series () {
+      return [this.article.series].flat()
+    },
+    tags () {
+      return this.article.tags
+    },
+    authors () {
+      return this.article.authors || [this.article.author].flat()
+    }
+  },
+
+  methods: {
+    parameterize (term) {
+      return kebabCase(term)
+    }
+  }
 }
 </script>
+
+<style lang='postcss' scoped>
+dl.authors {
+  & dd {
+    &:first-of-type::before {
+      content: 'by '
+    }
+    &:not(:last-child)::after {
+      content: ', '
+    }
+    &:nth-last-child(2)::after {
+      content: ' and '
+    }
+  }
+}
+</style>
