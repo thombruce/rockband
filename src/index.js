@@ -13,6 +13,7 @@ export default async function () {
     throw new Error('please set `components: true` inside `nuxt.config` and ensure using `nuxt >= 2.13.0`')
   }
 
+  await this.addModule('@thombruce/nuxt-taxonomies')
   await this.addModule('@nuxt/image')
 
   nuxt.options.colorMode = {
