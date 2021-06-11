@@ -20,7 +20,7 @@ export default {
 header {
   @apply flex flex-col justify-center py-5 px-4;
   & > span:first-of-type {
-    @apply block w-min m-auto text-7xl sm:text-9xl text-black dark:text-light font-poster text-chromatic-aberration;
+    @apply block w-min m-auto text-7xl sm:text-9xl text-black dark:text-light;
   }
   & > div {
     @apply flex justify-center;
