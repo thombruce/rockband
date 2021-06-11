@@ -1,8 +1,7 @@
 <template lang='pug'>
 header
-  div
-    span
-      NuxtLink(to='/') {{ title }}
+  span.py-24
+    NuxtLink(to='/') {{ title }}
   div
     TntUIDarkmodeToggle
 </template>
@@ -19,20 +18,23 @@ export default {
 
 <style lang='postcss' scoped>
 header {
-  @apply flex justify-between mb-5 px-4 py-5 bg-primary-500 dark:bg-primary-900 text-white;
+  @apply flex flex-col justify-center py-5 px-4;
   & > span:first-of-type {
-    @apply block font-bold pr-3 md:pr-4;
+    @apply block w-min m-auto text-7xl sm:text-9xl text-black dark:text-light;
   }
-  & > nav {
-    & ul {
-      @apply flex;
-      & li a {
-        @apply block px-3 md:px-4;
+  & > div {
+    @apply flex justify-center;
+    & > nav {
+      & ul {
+        @apply flex;
+        & li a {
+          @apply block px-3 md:px-4;
+        }
       }
     }
-  }
-  & > button, & > a, & > span:not(:first-of-type) {
-    @apply block px-4;
+    & > button, & > a, & > span:not(:first-of-type) {
+      @apply block px-4;
+    }
   }
 }
 </style>

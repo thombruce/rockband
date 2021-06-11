@@ -48,16 +48,16 @@ export default {
 
   computed: {
     categories () {
-      return this.article.categories || [this.article.category].flat()
+      return (this.article.categories || [this.article.category]).flat().filter(Boolean)
     },
     series () {
-      return [this.article.series].flat()
+      return ([this.article.series]).flat().filter(Boolean)
     },
     tags () {
-      return this.article.tags
+      return ([this.article.tags]).flat().filter(Boolean)
     },
     authors () {
-      return this.article.authors || [this.article.author].flat()
+      return (this.article.authors || [this.article.author]).flat().filter(Boolean)
     }
   },
 
