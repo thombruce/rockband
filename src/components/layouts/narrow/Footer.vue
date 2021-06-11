@@ -15,7 +15,7 @@ export default {
 
 <style lang='postcss' scoped>
 footer {
-  @apply mt-5 py-5 bg-light-100 dark:bg-dark-950;
+  @apply mt-5 py-5 bg-light-100 dark:bg-dark-900;
   & .social {
     @apply text-3xl;
     & ul {
