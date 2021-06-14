@@ -19,6 +19,7 @@ export default {
   },
   async fetch() {
     this.articles = await this.$content(this.section, { deep: this.deep })
+      .where({ draft: { $ne: true } })
       .sortBy('createdAt', 'desc')
       .fetch()
       .catch(() => {})

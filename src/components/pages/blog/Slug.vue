@@ -16,6 +16,7 @@ export default {
     this.slug = this.$route.params.slug
 
     this.article = await this.$content('blog', this.slug)
+      .where({ draft: { $ne: true } })
       .fetch()
       .catch(async () => {
         const terms = await this.$taxonomies(this.slug, 'blog').all()

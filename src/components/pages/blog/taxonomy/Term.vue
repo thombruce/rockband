@@ -27,7 +27,12 @@ export default {
     this.term = await this.$taxonomies(taxonomy, 'blog').find(this.$route.params.term)
 
     this.articles = await this.$content('blog')
-      .where({ $or: [{ [taxonomy]: { $contains: this.term.title } }, { [taxonomy]: { $eq: this.term.title } }] })
+      .where({
+        $and: [
+          { draft: { $ne: true } },
+          { $or: [{ [taxonomy]: { $contains: this.term.title } }, { [taxonomy]: { $eq: this.term.title } }] }
+        ]
+      })
       .sortBy('createdAt', 'desc')
       .fetch()
   }

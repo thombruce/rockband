@@ -17,7 +17,9 @@ export default {
     }
   },
   async fetch() {
-    this.page = await this.$content(this.$route.params.page).fetch()
+    this.page = await this.$content(this.$route.params.page)
+      .where({ draft: { $ne: true } })
+      .fetch()
   }
 }
 </script>

@@ -18,6 +18,7 @@ export default {
     this.slug = this.$route.params.slug
 
     this.article = await this.$content(this.section, this.slug)
+      .where({ draft: { $ne: true } })
       .fetch()
   },
   head () {
