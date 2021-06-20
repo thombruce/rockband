@@ -3,17 +3,15 @@ header.py-4
   dl.inline-block.mr-1(v-if='categories.length')
     dt.sr-only Categories
     dd.inline-block.mr-2(v-for='category in categories')
-      // TODO: Better handling of links for different paths
-      template(v-if='$router.match(`/blog/categories/${parameterize(category)}`).matched.length')
-        NuxtLink(:to='`/blog/categories/${parameterize(category)}`') {{ category }}
+      template(v-if='$router.match(`/categories/${parameterize(category)}`).matched.length')
+        NuxtLink(:to='`/categories/${parameterize(category)}`') {{ category }}
       template(v-else) {{ category }}
 
   dl.inline-block.mr-1(v-if='series.length')
     dt.sr-only Series
     dd.inline-block.mr-2(v-for='series in series')
-      // TODO: Better handling of links for different paths
-      template(v-if='$router.match(`/blog/series/${parameterize(series)}`).matched.length')
-        NuxtLink(:to='`/blog/series/${parameterize(series)}`') {{ series }}
+      template(v-if='$router.match(`/series/${parameterize(series)}`).matched.length')
+        NuxtLink(:to='`/series/${parameterize(series)}`') {{ series }}
       template(v-else) {{ series }}
 
   h1 {{ article.title }}
@@ -22,17 +20,15 @@ header.py-4
     dl.authors
       dt.sr-only Authors
       dd.inline(v-for='author in authors')
-        // TODO: Better handling of links for different paths
-        template(v-if='$router.match(`/blog/authors/${parameterize(author)}`).matched.length')
-          NuxtLink(:to='`/blog/authors/${parameterize(author)}`' rel='author') {{ author }}
+        template(v-if='$router.match(`/authors/${parameterize(author)}`).matched.length')
+          NuxtLink(:to='`/authors/${parameterize(author)}`' rel='author') {{ author }}
         template(v-else) {{ author }}
 
   dl.inline-block.mr-1(v-if='tags.length')
     dt.sr-only Tags
     dd.inline-block.mr-2(v-for='tag in tags')
-      // TODO: Better handling of links for different paths
-      template(v-if='$router.match(`/blog/tags/${parameterize(tag)}`).matched.length')
-        NuxtLink(:to='`/blog/tags/${parameterize(tag)}`') {{ tag }}
+      template(v-if='$router.match(`/tags/${parameterize(tag)}`).matched.length')
+        NuxtLink(:to='`/tags/${parameterize(tag)}`') {{ tag }}
       template(v-else) {{ tag }}
 
   time.block(pubdate :datetime='article.createdAt') {{ article.createdAt }}
