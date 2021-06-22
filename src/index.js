@@ -51,7 +51,7 @@ export default async function () {
           success: { ...colors.green, ...{ DEFAULT: colors.green['500'] } },
           danger: { ...colors.red, ...{ DEFAULT: colors.red['600'] } },
           warning: { ...colors.yellow, ...{ DEFAULT: colors.yellow['400'] } },
-          info: { ...colors.lightBlue, ...{ DEFAULT: colors.lightBlue['300'] } },
+          info: { ...colors.sky, ...{ DEFAULT: colors.sky['300'] } },
           light: { ...colors.coolGray, ...{ DEFAULT: colors.coolGray['50'] } },
           dark: { ...colors.coolGray, ...{ DEFAULT: colors.coolGray['900'] } },
         }
