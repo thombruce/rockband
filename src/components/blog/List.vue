@@ -5,7 +5,7 @@ div
       header
         h2
           NuxtLink(:to='article') {{ article.title }}
-        time(:datetime='article.createdAt') {{ article.createdAt }}
+        time(:datetime='article.createdAt') {{ article.createdAt | toLocaleString }}
       div(v-if='article.description')
         p {{ article.description }}
   div.text-center(v-else)

@@ -31,7 +31,7 @@ header.py-4
         NuxtLink(:to='`/tags/${parameterize(tag)}`') {{ tag }}
       template(v-else) {{ tag }}
 
-  time.block(pubdate :datetime='article.createdAt') {{ article.createdAt }}
+  time.block(pubdate :datetime='article.createdAt') {{ article.createdAt | toLocaleString }}
 
   NuxtImg(v-if='article.image' :src='article.image' sizes='xs:320px sm:640px md:768px')
 </template>

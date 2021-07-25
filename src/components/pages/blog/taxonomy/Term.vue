@@ -8,7 +8,7 @@ article(v-if='!$fetchState.pending')
       header
         h2
           NuxtLink(:to='article') {{ article.title }}
-        time(:datetime='article.createdAt') {{ article.createdAt }}
+        time(:datetime='article.createdAt') {{ article.createdAt | toLocaleString }}
       div
         p {{ article.description }}
 </template>
