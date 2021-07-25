@@ -8,4 +8,4 @@ Vue.filter('titleize', val => startCase(val))
 
 Vue.filter('toLocaleString', val => new Date(val).toLocaleDateString())
 
-Vue.filter('toLocaleString', val => DateTime.fromISO(val).toLocaleString(DateTime.DATETIME_FULL))
+Vue.filter('toLocaleString', val => DateTime.fromISO(val).toLocaleString(DateTime.DATETIME_MED))
