@@ -8,7 +8,7 @@ article(v-if='!$fetchState.pending')
       header
         h2
           NuxtLink(:to='article') {{ article.title }}
-        time(:datetime='article.createdAt') {{ article.createdAt | toLocaleString }}
+        time(:datetime='article.date') {{ article.date | toLocaleString }}
       div
         p {{ article.description }}
 </template>
@@ -33,7 +33,7 @@ export default {
           { $or: [{ [taxonomy]: { $contains: this.term.title } }, { [taxonomy]: { $eq: this.term.title } }] }
         ]
       })
-      .sortBy('createdAt', 'desc')
+      .sortBy('date', 'desc')
       .fetch()
   }
 }

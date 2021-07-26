@@ -20,7 +20,7 @@ export default {
 
     this.articles = await this.$content('blog')
       .where({ draft: { $ne: true } })
-      .sortBy('createdAt', 'desc')
+      .sortBy('date', 'desc')
       .fetch()
       .catch(() => {})
   },
