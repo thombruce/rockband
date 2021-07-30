@@ -31,6 +31,9 @@ export default async function () {
   nuxt.options.tailwindcss = {
     cssPath: fs.existsSync("assets/css/tnt.css") ? "~/assets/css/tnt.css" : join(__dirname, "assets/tnt.css"),
     config: {
+      plugins: [
+        require('daisyui'),
+      ],
       theme: {
         colors: {
           transparent: 'transparent',
