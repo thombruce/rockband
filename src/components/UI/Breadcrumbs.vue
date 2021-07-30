@@ -1,11 +1,11 @@
 <template lang='pug'>
-ol.mb-3
-  li.inline
-    NuxtLink(to='/')
-      fa(:icon='faHome')
-  li.inline(v-for='crumb in crumbs')
-    span.mx-2 /
-    NuxtLink(:to='crumb.path') {{ crumb.title }}
+.breadcrumbs(v-if='crumbs')
+  ul
+    li
+      NuxtLink(to='/')
+        fa(:icon='faHome')
+    li(v-for='crumb in crumbs')
+      NuxtLink(:to='crumb.path') {{ crumb.title }}
 </template>
 
 <script>
@@ -37,7 +37,7 @@ export default {
           })
         }
       })
-      return crumbs
+      return crumbs.length ? crumbs : false
     }
   }
 }
