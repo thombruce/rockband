@@ -2,8 +2,6 @@
 header
   span.py-24
     NuxtLink(to='/') {{ title }}
-  div
-    TntUIDarkmodeToggle
 </template>
 
 <script>
