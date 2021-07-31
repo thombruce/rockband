@@ -1,4 +1,3 @@
-
 import { join, resolve } from 'path'
 
 import fs from 'fs'
@@ -26,6 +25,7 @@ export default async function () {
     cssPath: fs.existsSync("assets/css/tnt.css") ? "~/assets/css/tnt.css" : join(__dirname, "assets/tnt.css"),
     config: {
       plugins: [
+        require('@tailwindcss/typography'),
         require('daisyui'),
       ]
     }

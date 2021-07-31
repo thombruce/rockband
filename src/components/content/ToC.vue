@@ -1,6 +1,6 @@
 <template lang='pug'>
 aside
-  h2.mb-2 Table of Contents
+  h2 Table of Contents
   TntUITableOfContents(:toc='article.toc')
 </template>
 

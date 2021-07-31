@@ -1,9 +1,9 @@
 <template lang='pug'>
-article
+article.prose
   TntContentHeader(:article='article')
   template(v-if='article.toc && article.toc.length')
     TntContentToC(:article='article')
-    hr.my-3
+    hr
   TntContentBody(:article='article')
 </template>
 

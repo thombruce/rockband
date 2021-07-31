@@ -1,5 +1,5 @@
 <template lang='pug'>
-header.py-4
+header
   dl.inline-block.mr-1(v-if='categories.length')
     dt.sr-only Categories
     dd.inline-block.mr-2(v-for='category in categories')

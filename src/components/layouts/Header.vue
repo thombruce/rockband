@@ -1,6 +1,6 @@
 <template lang='pug'>
 header
-  span.py-24
+  span
     NuxtLink(to='/') {{ title }}
 </template>
 
