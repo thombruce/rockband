@@ -38,7 +38,6 @@ export default async function () {
     tailwindConfig.purge.content.push(`${join(__dirname, 'plugins')}/**/*.{js,ts}`)
 
     tailwindConfig.purge.content.push('content/**/*.md')
-    tailwindConfig.darkMode = 'class'
     tailwindConfig.plugins.push(require('@tailwindcss/forms'))
   })
 

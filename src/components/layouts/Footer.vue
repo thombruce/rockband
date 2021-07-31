@@ -1,5 +1,5 @@
 <template lang='pug'>
-footer
+footer.bg-neutral.text-neutral-content
   .copyright &copy; {{ title }} - {{ new Date().getFullYear() }}
 </template>
 
@@ -15,7 +15,7 @@ export default {
 
 <style lang='postcss' scoped>
 footer {
-  @apply mt-5 py-5 bg-neutral;
+  @apply mt-5 py-5;
   & .social {
     @apply text-3xl;
     & ul {
@@ -26,9 +26,9 @@ footer {
     }    
   }
   & .copyright {
-    @apply pt-4 text-center text-sm text-gray-400 dark:text-gray-500;
+    @apply pt-4 text-center text-sm;
     & a {
-      @apply text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-400;
+      @apply link;
     }
   }
 }
