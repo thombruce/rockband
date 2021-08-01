@@ -26,14 +26,7 @@ export default async function () {
     config: {
       plugins: [
         require('daisyui'),
-      ],
-      purge: {
-        options: {
-          safelist: [
-            /data-theme$/
-          ]
-        }
-      }
+      ]
     }
   }
   await this.addModule('@nuxtjs/tailwindcss')
@@ -44,6 +37,13 @@ export default async function () {
     tailwindConfig.purge.content.push(`${join(__dirname, 'plugins')}/**/*.{js,ts}`)
 
     tailwindConfig.purge.content.push('content/**/*.md')
+
+    tailwindConfig.purge.options = {
+      safelist: [
+        /data-theme$/
+      ]
+    }
+
     tailwindConfig.plugins.push(require('@tailwindcss/forms'))
   })
 
