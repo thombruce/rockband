@@ -26,7 +26,14 @@ export default async function () {
     config: {
       plugins: [
         require('daisyui'),
-      ]
+      ],
+      purge: {
+        options: {
+          safelist: [
+            /data-theme$/
+          ]
+        }
+      }
     }
   }
   await this.addModule('@nuxtjs/tailwindcss')
