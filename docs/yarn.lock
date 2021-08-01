@@ -1496,7 +1496,7 @@
 
 "@thombruce/tnt@https://github.com/thombruce/tnt":
   version "0.1.0"
-  resolved "https://github.com/thombruce/tnt#1e8bd14fc3448fc3baaa6c2938cfa079c8768c56"
+  resolved "https://github.com/thombruce/tnt#1b7fe587c620c5ec269670da84c7784e7f88a787"
   dependencies:
     "@fortawesome/free-solid-svg-icons" "^5.15.3"
     "@nuxt/image" "^0.4.14"
@@ -1511,6 +1511,7 @@
     pug "^3.0.2"
     pug-plain-loader "^1.1.0"
     simple-icons "^5.0.0"
+    theme-change "^2.0.2"
 
 "@types/anymatch@*":
   version "3.0.0"
@@ -9813,6 +9814,11 @@ text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
+
+theme-change@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/theme-change/-/theme-change-2.0.2.tgz#142aa0669fde5ca7e625f5d3c09074ebb5bdb374"
+  integrity sha512-YvQqavf8nlGB3J7PdO0zLLhSLlgYhrqZL6By3FuzFIlWBsPTSPG/V98cHJllK3mmU97Jecei8XYiHalhy2umUw==
 
 thread-loader@^3.0.4:
   version "3.0.4"
