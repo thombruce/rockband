@@ -9,3 +9,13 @@
 
   TntLayoutsFooter
 </template>
+
+<script>
+import { themeChange } from 'theme-change'
+
+export default {
+  mounted () {
+    themeChange(false)
+  }
+}
+</script>
