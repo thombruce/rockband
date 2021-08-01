@@ -1,5 +1,5 @@
 <template lang='pug'>
-article.prose
+article
   TntContentHeader(:article='article')
   template(v-if='article.toc && article.toc.length')
     TntContentToC(:article='article')
