@@ -38,12 +38,6 @@ export default async function () {
 
     tailwindConfig.purge.content.push('content/**/*.md')
 
-    tailwindConfig.purge.options = {
-      safelist: [
-        /data-theme$/
-      ]
-    }
-
     tailwindConfig.plugins.push(require('@tailwindcss/forms'))
   })
 
