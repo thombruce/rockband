@@ -16,6 +16,6 @@
     "nuxt": "^2.15.7"
   },
   "devDependencies": {
-    "@thombruce/tnt": "https://github.com/thombruce/tnt"
+    "@thombruce/tnt": "file:.."
   }
 }
