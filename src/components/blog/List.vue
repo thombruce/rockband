@@ -3,7 +3,7 @@ div
   template(v-if='articles')
     article.card.card-side.bordered.mb-4(v-for='article in articles')
       figure
-        NuxtImg(v-if='article.image' :src='article.image' width='200' height='200')
+        NuxtImg(v-if='article.image' :src='article.image' width='200' height='200' style='width:200px;height:200px;object-fit:cover;')
 
       .card-body
         header
