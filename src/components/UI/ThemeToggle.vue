@@ -1,9 +1,10 @@
 <template lang="pug">
 .dropdown.dropdown-end(v-if='themes')
   .m-1.btn.btn-ghost(tabindex='0') Theme
-  ul.shadow.menu.dropdown-content.bg-base-200.text-base-content.rounded-box.w-52
-    li(v-for="(theme, index) in themes")
-      a(tabindex="0" :data-set-theme="theme" data-act-class="active") {{ theme | titleize }}
+  .overflow-y-auto.shadow.dropdown-content.h-96.w-52.rounded-box.bg-base-200.text-base-content
+    ul.menu
+      li(v-for="(theme, index) in themes")
+        a(tabindex="0" :data-set-theme="theme" data-act-class="active") {{ theme | titleize }}
 </template>
 
 <script>
