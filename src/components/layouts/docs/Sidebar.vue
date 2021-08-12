@@ -7,7 +7,7 @@
         .navbar-start
           NuxtLink.btn.btn-ghost(to='/')
             span.text-lg.font-bold {{ title }}
-    TntLayoutsDocsSidebarMenu
+    TntLayoutsDocsSidebarMenu(v-on:close-menu="$emit('close-menu')")
 </template>
 
 <script>

@@ -3,14 +3,14 @@ div.h-full
   ul.menu.flex.flex-col.p-4(v-for='(collection, dir) in collections')
     li.menu-title.mt-2
       span
-        NuxtLink(:to='dir') {{ dir | titleize }}
+        NuxtLink(v-on:click.native="$emit('close-menu')" :to='dir') {{ dir | titleize }}
     li(v-for='page in collection' :key='page.slug')
-      NuxtLink(:to='page') {{ page.title }}
+      NuxtLink(v-on:click.native="$emit('close-menu')" :to='page') {{ page.title }}
 
     li.menu-title.mt-2
       span Other Pages
     li(v-for='page in pages' :key='page.slug')
-      NuxtLink(:to='page') {{ page.title }}
+      NuxtLink(v-on:click.native="$emit('close-menu')" :to='page') {{ page.title }}
 </template>
 
 <script>
