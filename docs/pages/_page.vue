@@ -11,13 +11,16 @@ div
 export default {
   layout: 'docs',
 
-  async asyncData ({ $content, params }) {
+  async asyncData ({ $content, $taxonomies, params }) {
     const slug = params.page
 
     const page = await $content(slug)
       .where({ draft: { $ne: true } })
       .fetch()
-      .catch(() => {})
+      .catch(async () => {
+        const terms = await $taxonomies(slug, '', { deep: true }).all()
+        return terms
+      })
 
     return { slug, page }
   }

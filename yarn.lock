@@ -160,10 +160,10 @@
   dependencies:
     mini-svg-data-uri "^1.2.3"
 
-"@thombruce/nuxt-taxonomies@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@thombruce/nuxt-taxonomies/-/nuxt-taxonomies-0.1.4.tgz#bb3f4d8f025d97a1e661941d9f86df02b5ff5e19"
-  integrity sha512-iefxWyFdQfAZr6kRiBwvQ57UNcVXeeYBFlDhMEN5ehq9G/OuBQTsc/C/uZ9XStlzWSJKcsmMkvT6BRrh2T0NlQ==
+"@thombruce/nuxt-taxonomies@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@thombruce/nuxt-taxonomies/-/nuxt-taxonomies-0.2.0.tgz#342f87cb4c34086345e6f7842c56c6364fea678e"
+  integrity sha512-ICemyAriBkLsV5OjY4jyuSo1T31QzgzpvyFHIL2w2om6eVyJS9ojdkKjMQtgvw0PQBTlmnFRfit7PBpuwCvrTA==
   dependencies:
     lodash "^4.17.21"
 

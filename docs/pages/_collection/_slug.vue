@@ -1,18 +1,38 @@
 <template lang='pug'>
-div(v-if='article')
-  TntContent(:article='article')
+div
+  TntContent(v-if='!Array.isArray(article)' :article='article')
+  article(v-else)
+    header
+      h1 {{ slug | titleize }}
+    TntBlogList(:articles='article')
 </template>
 
 <script>
 export default {
   layout: 'docs',
 
-  async asyncData ({ $content, redirect, query, params }) {
+  async asyncData ({ $content, $taxonomies, redirect, query, params }) {
     const slug = params.slug
 
     const article = await $content(params.collection, slug)
       .where({ draft: { $ne: true } })
       .fetch()
+      .catch(async () => {
+        const taxonomy = params.collection
+        const term = await $taxonomies(taxonomy, '', { deep: true }).find(params.slug)
+
+        const articles = await $content('', { deep: true })
+          .where({
+            $and: [
+              { draft: { $ne: true } },
+              { $or: [{ [taxonomy]: { $contains: term.title } }, { [taxonomy]: { $eq: term.title } }] }
+            ]
+          })
+          .sortBy('date', 'desc')
+          .fetch()
+        
+        return articles
+      })
 
     if (article.redirect) {
       redirect({ path: article.redirect, query: query })
