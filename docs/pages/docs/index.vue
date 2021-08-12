@@ -5,6 +5,8 @@ article
 
 <script>
 export default {
+  layout: 'docs',
+
   async asyncData ({ $content }) {
     const articles = await $content('docs')
       .where({ $and: [{ draft: { $ne: true } }, { redirect: { $type: 'undefined' } }] })

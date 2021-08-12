@@ -5,6 +5,8 @@ div(v-if='article')
 
 <script>
 export default {
+  layout: 'docs',
+
   async asyncData ({ $content, redirect, query, params }) {
     const slug = params.slug
 
