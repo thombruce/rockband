@@ -10,7 +10,7 @@ export default {
   async asyncData ({ $content, redirect, query, params }) {
     const slug = params.slug
 
-    const article = await $content('docs', slug)
+    const article = await $content(params.collection, slug)
       .where({ draft: { $ne: true } })
       .fetch()
 

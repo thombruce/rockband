@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Installation
 date: 2021-07-31T19:34:09Z
 ---
 

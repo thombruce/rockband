@@ -1,5 +1,5 @@
 <template lang='pug'>
-aside
+aside(v-if='article.showToC != false')
   h2 Table of Contents
   TntUITableOfContents(:toc='article.toc')
 </template>

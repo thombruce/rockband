@@ -1,5 +1,5 @@
 <template lang='pug'>
-div
+div(:class='article.container')
   NuxtContent(:document='article')
 </template>
 

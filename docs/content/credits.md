@@ -1,8 +1,10 @@
 ---
 title: Credits
+order: 2
 description: 'Packages and media used by TNT.'
 date: 2021-08-01T17:00:34Z
 container: text-center
+showToC: false
 ---
 
 ## Writer/Developer
