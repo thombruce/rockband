@@ -5,10 +5,8 @@
     .sticky.inset-x-0.top-0.z-50.hidden.w-full.py-1.transition.duration-200.ease-in-out.border-b.border-base-200.bg-neutral.text-neutral-content(class='lg:block')
       header.mx-auto.space-x-1.navbar.max-w-none
         .navbar-start
-          span.text-lg.font-bold
-            NuxtLink(to='/') {{ title }}
-        .navbar-end
-          TntUIThemeToggle
+          NuxtLink.btn.btn-ghost(to='/')
+            span.text-lg.font-bold {{ title }}
     TntLayoutsDocsSidebarMenu
 </template>
 
