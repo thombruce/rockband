@@ -4,6 +4,8 @@ order: 1
 date: 2021-08-12T19:34:09Z
 ---
 
+## Current Features
+
 TNT is a Nuxt component library that comes with:
 
 - [Nuxt Image](https://image.nuxtjs.org/)
@@ -15,3 +17,9 @@ TNT is a Nuxt component library that comes with:
 - [Simple Icons](https://simpleicons.org/)
 - [Lodash](https://lodash.com/)
 - [Nuxt Taxonomies](https://github.com/thombruce/nuxt-taxonomies)
+
+## Planned Features
+
+Nuxt 3 promises to make Nuxt even more powerful. In particular, TNT is looking forwards to integrating the [pluggable child apps API](https://github.com/nuxt/rfcs/issues/30) which could make TNT a drop-in and go solution - no need to add a few pages to your Nuxt app anymore, TNT would provide! A partial solution for this is offered by the Nuxt 2 plugin, [nuxt-extend](https://github.com/nuxt-community/nuxt-extend); the plugin does not support automatic integration of `pages/` or `store/` directories.
+
+Nuxt 3 also promises to include a `<Portal>` component: https://github.com/nuxt/nuxt.js/issues/190#issuecomment-734239175 This would enable the layout templates to expose "portals" into which deeply nested page or component templates could inject dynamic content. An existing solution for Vue 2 is the [PortalVue](https://github.com/LinusBorg/portal-vue) plugin.
