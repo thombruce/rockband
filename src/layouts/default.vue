@@ -1,13 +1,13 @@
 <template lang='pug'>
 #appContainer
-  TntLayoutsHeader
+  TntLayoutsClassicHeader
 
   main.container.mx-auto.px-5
     .max-w-prose.mx-auto
       TntUIBreadcrumbs
       Nuxt
 
-  TntLayoutsFooter
+  TntLayoutsClassicFooter
 </template>
 
 <script>
