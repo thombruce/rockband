@@ -13,7 +13,7 @@
     TntUIBreadcrumbs
     Nuxt
 
-  TntLayoutsFooter
+  TntLayoutsClassicFooter
 </template>
 
 <script>
