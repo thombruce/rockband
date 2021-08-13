@@ -16,6 +16,7 @@ export default {
 
     const page = await $content(slug)
       .where({ draft: { $ne: true } })
+      .sortBy('date', 'desc')
       .fetch()
       .catch(async () => {
         const terms = await $taxonomies(slug, '', { deep: true }).all()
