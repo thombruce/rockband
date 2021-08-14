@@ -1,7 +1,7 @@
 <template lang='pug'>
 article
   TntContentHeader(:article='article')
-  template(v-if='article.toc && article.toc.length')
+  template(v-if='article.showToC != false && article.toc && article.toc.length')
     TntContentToC(:article='article')
     hr
   TntContentBody(:article='article')

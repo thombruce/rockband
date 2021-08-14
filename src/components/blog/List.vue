@@ -9,7 +9,7 @@ div
         header
           h2.card-title
             NuxtLink(:to='article') {{ article.title }}
-          time(:datetime='article.date') {{ article.date | toLocaleString }}
+          time(v-if='article.date' :datetime='article.date') {{ article.date | toLocaleString }}
         div(v-if='article.description')
           p {{ article.description }}
   div.text-center(v-else)
