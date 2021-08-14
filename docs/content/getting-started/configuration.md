@@ -14,3 +14,5 @@ The installation commit runs `yarn add [source] --dev` to add the TNT dev depend
 **Configuration:** https://github.com/thombruce/ordahhh/commit/b71754fdc73cdc8212a7b9828b977a79310a104d
 
 This configuration commit does a bit more. It adds `tnt.config.js`, `tailwind.config.js`, `nuxt.feed.js` and a default fallback image to the static directory with ideal dimensions for OpenGraph (1920x1080). It makes numerous changes to `nuxt.config.js` in order to utilize the new files properly. _This is a bit cumbersome. In future and with the exception of the tailwind config file, I would like to constrain modifications to a single file (maybe two: `tnt.config.js` and `tnt.feed.js`) and have the module itself do the work to merge that file with others._
+
+_Note: I also a deploy workflow to build the site on GitHub's CI: https://github.com/thombruce/ordahhh/commit/8e980c081dd420c74b0de9b15225130a4917cf6c_
