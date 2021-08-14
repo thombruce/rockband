@@ -2,7 +2,7 @@
 .navbar
   nav
     template(v-for='(collection, dir) in collections')
-      NuxtLink.btn.btn-ghost(v-if="dir != ''" :key='dir' :to='dir')
+      NuxtLink.btn.btn-ghost(v-if="dir != '/'" :key='dir' :to='dir')
         span {{ dir.split('/').pop() | titleize }}
       NuxtLink.btn.btn-ghost(v-else v-for='(page) in collection' :key='page.slug' :to='page')
         span {{ page.title }}
@@ -27,7 +27,7 @@ export default {
       .fetch()
       .catch(() => {})
 
-    this.collections = groupBy(nestedPages, (c) => { return c.dir.split('/')[1] })
+    this.collections = groupBy(nestedPages, (c) => { return `/${c.dir.split('/')[1]}` })
   },
 }
 </script>
