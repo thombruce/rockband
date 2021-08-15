@@ -1,5 +1,5 @@
 <template lang='pug'>
-  span.simple-icon(v-html='svg')
+span.simple-icon(v-html='svg')
 </template>
 
 <script>
