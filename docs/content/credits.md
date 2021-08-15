@@ -16,9 +16,9 @@ showToC: false
 
 ## Built With
 
-<a href='https://nuxtjs.org/' class='text-2xl'><tnt-u-i-simple-icon icon='nuxtdotjs'></tnt-u-i-simple-icon> Nuxt.js</a>
+<a href='https://nuxtjs.org/' class='text-2xl'><tnt-ui-simple-icon icon='nuxtdotjs'></tnt-ui-simple-icon> Nuxt.js</a>
 <br class='inline md:hidden'/><span class='hidden md:inline'>&emsp;</span>
-<a href='https://tailwindcss.com/' class='text-2xl'><tnt-u-i-simple-icon icon='tailwindcss'></tnt-u-i-simple-icon> Tailwind CSS</a>
+<a href='https://tailwindcss.com/' class='text-2xl'><tnt-ui-simple-icon icon='tailwindcss'></tnt-ui-simple-icon> Tailwind CSS</a>
 <br class='inline md:hidden'/><span class='hidden md:inline'>&emsp;</span>
 <a href='https://daisyui.com/' class='text-2xl'>DaisyUI</a>
 
@@ -27,10 +27,10 @@ showToC: false
 
 ## Fonts
 
-<a href='https://fontawesome.com/'><tnt-u-i-simple-icon icon='fontawesome'></tnt-u-i-simple-icon> Font Awesome</a>
+<a href='https://fontawesome.com/'><tnt-ui-simple-icon icon='fontawesome'></tnt-ui-simple-icon> Font Awesome</a>
 <br class='inline md:hidden'/><span class='hidden md:inline'>&emsp;</span>
-<a href='https://simpleicons.org/'><tnt-u-i-simple-icon icon='simpleicons'></tnt-u-i-simple-icon> Simple Icons</a>
+<a href='https://simpleicons.org/'><tnt-ui-simple-icon icon='simpleicons'></tnt-ui-simple-icon> Simple Icons</a>
 
 ## Hosting
 
-<a href='https://github.com/' class='text-2xl font-light'><tnt-u-i-simple-icon icon='github'></tnt-u-i-simple-icon> GitHub</a>
+<a href='https://github.com/' class='text-2xl font-light'><tnt-ui-simple-icon icon='github'></tnt-ui-simple-icon> GitHub</a>

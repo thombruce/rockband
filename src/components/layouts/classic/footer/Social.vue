@@ -3,7 +3,7 @@
   ul
     li(v-for='(item, i) in social' :key='i')
       a(:href='item.to' target='_blank')
-        TntUISimpleIcon(:icon='item.icon')
+        TntUiSimpleIcon(:icon='item.icon')
 </template>
 
 <script>
