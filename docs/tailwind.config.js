@@ -1,13 +1,6 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: {
-    options: {
-      safelist: [
-        /data-theme$/,
-      ]
-    }
-  },
   daisyui: {
     themes: [
       {

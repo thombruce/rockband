@@ -22,24 +22,43 @@ export default async function () {
   await this.addModule('@nuxtjs/fontawesome')
 
   nuxt.options.tailwindcss = {
+    ...{
     cssPath: fs.existsSync("assets/css/tnt.css") ? "~/assets/css/tnt.css" : join(__dirname, "assets/tnt.css"),
+      mode: 'jit',
     config: {
+        purge: {
+          options: {
+            safelist: [
+              /data-theme$/,
+            ]
+          },
+          content: [
+            `${join(__dirname, 'components')}/**/*.{vue,js}`,
+            `${join(__dirname, 'layouts')}/**/*.vue`,
+            // `${join(__dirname, 'pages')}/**/*.vue`, // NOTE: This should become usable with Nuxt 3.
+            `${join(__dirname, 'plugins')}/**/*.{js,ts}`,
+            'content/**/*.md',
+          ]
+        },
       plugins: [
+          require('@tailwindcss/forms'),
         require('daisyui'),
       ]
     }
+    },
+    ...nuxt.options.tailwindcss
   }
   await this.addModule('@nuxtjs/tailwindcss')
-  this.nuxt.hook('tailwindcss:config', function (tailwindConfig) {
-    tailwindConfig.purge.content.push(`${join(__dirname, 'components')}/**/*.{vue,js}`)
-    tailwindConfig.purge.content.push(`${join(__dirname, 'layouts')}/**/*.vue`)
-    // tailwindConfig.purge.content.push(`${join(__dirname, 'pages')}/**/*.vue`) // NOTE: This should become usable with Nuxt 3.
-    tailwindConfig.purge.content.push(`${join(__dirname, 'plugins')}/**/*.{js,ts}`)
-
-    tailwindConfig.purge.content.push('content/**/*.md')
-
-    tailwindConfig.plugins.push(require('@tailwindcss/forms'))
-  })
+  // this.nuxt.hook('tailwindcss:config', function (tailwindConfig) {
+  //   tailwindConfig.purge.content.push(`${join(__dirname, 'components')}/**/*.{vue,js}`)
+  //   tailwindConfig.purge.content.push(`${join(__dirname, 'layouts')}/**/*.vue`)
+  //   // tailwindConfig.purge.content.push(`${join(__dirname, 'pages')}/**/*.vue`) // NOTE: This should become usable with Nuxt 3.
+  //   tailwindConfig.purge.content.push(`${join(__dirname, 'plugins')}/**/*.{js,ts}`)
+  //
+  //   tailwindConfig.purge.content.push('content/**/*.md')
+  //
+  //   tailwindConfig.plugins.push(require('@tailwindcss/forms'))
+  // })
 
   this.addPlugin({
     src: resolve(__dirname, 'plugins/filters.js')
