@@ -1,5 +1,5 @@
 {
-  "name": "@thombruce/tnt",
+  "name": "@thombruce/nuxt-tnt",
   "version": "0.1.0",
   "description": "My personal component library for Nuxt.js",
   "main": "src/index.js",
@@ -7,12 +7,6 @@
   "repository": "https://github.com/thombruce/tnt",
   "author": "Thom Bruce <thom@thombruce.com>",
   "license": "MIT",
-  "scripts": {
-    "dev": "cd docs && yarn dev",
-    "build": "cd docs && yarn build",
-    "start": "cd docs && yarn start",
-    "generate": "cd docs && yarn generate"
-  },
   "devDependencies": {},
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.15.4",

@@ -1,4 +1,4 @@
-# TNT
+# Nuxt TNT
 
 ## Features
 
