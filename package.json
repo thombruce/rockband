@@ -1,0 +1,14 @@
+{
+  "name": "@thombruce/tnt",
+  "version": "0.1.0",
+  "description": "A Vue.js component library based on TailwindCSS and DaisyUI",
+  "repository": "https://github.com/thombruce/tnt",
+  "author": "Thom Bruce <thom@thombruce.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "cd docs && yarn dev",
+    "build": "cd docs && yarn build",
+    "start": "cd docs && yarn start",
+    "generate": "cd docs && yarn generate"
+  }
+}
