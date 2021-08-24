@@ -10,5 +10,17 @@
     "build": "cd docs && yarn build",
     "start": "cd docs && yarn start",
     "generate": "cd docs && yarn generate"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.3.3",
+    "autoprefixer": "^10.3.2",
+    "daisyui": "^1.13.2",
+    "lodash": "^4.17.21",
+    "luxon": "^2.0.2",
+    "postcss": "^8.3.6",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
+    "tailwindcss": "^2.2.7",
+    "theme-change": "^2.0.2"
   }
 }
