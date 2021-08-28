@@ -5,6 +5,7 @@
   "repository": "https://github.com/thombruce/tnt",
   "author": "Thom Bruce <thom@thombruce.com>",
   "license": "MIT",
+  "main": "src/index.js",
   "scripts": {
     "dev": "cd docs && yarn dev",
     "build": "cd docs && yarn build",
