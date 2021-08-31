@@ -13,6 +13,9 @@
     "generate": "cd docs && yarn generate"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/vue-fontawesome": "^2.0.2",
     "@tailwindcss/forms": "^0.3.3",
     "autoprefixer": "^9",
     "daisyui": "^1.13.2",
@@ -21,6 +24,7 @@
     "postcss": "^7",
     "pug": "^3.0.2",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "theme-change": "^2.0.2",
     "vue-meta": "^2.4.0"
   }
 }
