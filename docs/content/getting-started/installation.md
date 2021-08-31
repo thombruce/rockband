@@ -5,10 +5,21 @@ date: 2021-07-31T19:34:09Z
 
 ## Installation
 
+### Vue CLI
+
+Add TNT to your project and run the initializer:
+
+```sh
+yarn add --dev https://github.com/thombruce/vue-cli-plugin-tnt
+vue invoke @thombruce/tnt
+```
+
+### Nuxt
+
 Add TNT to your project:
 
 ```sh
-yarn add --dev https://github.com/thombruce/tnt
+yarn add --dev https://github.com/thombruce/nuxt-tnt
 ```
 
 Add TNT to buildModules in `nuxt.config.js`:
