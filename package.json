@@ -4,7 +4,7 @@
   "description": "My personal component library for Nuxt.js",
   "main": "src/index.js",
   "style": "src/assets/tnt.css",
-  "repository": "https://github.com/thombruce/tnt",
+  "repository": "https://github.com/thombruce/nuxt-tnt",
   "author": "Thom Bruce <thom@thombruce.com>",
   "license": "MIT",
   "devDependencies": {},
