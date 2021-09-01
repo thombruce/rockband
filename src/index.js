@@ -15,12 +15,6 @@ export default async function () {
   await this.addModule('@thombruce/nuxt-taxonomies')
   await this.addModule('@nuxt/image')
 
-  nuxt.options.fontawesome = {
-    ...{ component: 'fa', icons: { solid: [] } },
-    ...nuxt.options.fontawesome
-  }
-  await this.addModule('@nuxtjs/fontawesome')
-
   nuxt.options.tailwindcss = {
     ...{
       cssPath: fs.existsSync("assets/css/tnt.css") ? "~/assets/css/tnt.css" : join(__dirname, "assets/tnt.css"),
@@ -49,6 +43,10 @@ export default async function () {
     ...nuxt.options.tailwindcss
   }
   await this.addModule('@nuxtjs/tailwindcss')
+
+  this.addPlugin({
+    src: resolve(__dirname, 'plugins/tnt.js')
+  })
 
   this.addPlugin({
     src: resolve(__dirname, 'plugins/filters.js')

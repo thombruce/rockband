@@ -41,7 +41,7 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.36.tgz#b44e52db3b6b20523e0c57ef8c42d315532cb903"
   integrity sha512-a/7BiSgobHAgBWeN7N0w+lAhInrGxksn13uK7231n2m8EDPE3BMCl9NZLTGrj9ZXfCmC6LM0QLqXidIizVQ6yg==
 
-"@fortawesome/fontawesome-svg-core@^1.2.27", "@fortawesome/fontawesome-svg-core@^1.2.36":
+"@fortawesome/fontawesome-svg-core@^1.2.36":
   version "1.2.36"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.36.tgz#4f2ea6f778298e0c47c6524ce2e7fd58eb6930e3"
   integrity sha512-YUcsLQKYb6DmaJjIHdDWpBIGCcyE/W+p/LMGvjQem55Mm2XWVAP5kWTMKWLv9lwpCVjpLxPyOMOyUocP1GxrtA==
@@ -54,11 +54,6 @@
   integrity sha512-JLmQfz6tdtwxoihXLg6lT78BorrFyCf59SAwBM6qV/0zXyVeDygJVb3fk+j5Qat+Yvcxp1buLTY5iDh1ZSAQ8w==
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.2.36"
-
-"@fortawesome/vue-fontawesome@^0.1.9":
-  version "0.1.10"
-  resolved "https://registry.yarnpkg.com/@fortawesome/vue-fontawesome/-/vue-fontawesome-0.1.10.tgz#eeeec1e4e8850bed0468f938292b06cda793bf34"
-  integrity sha512-b2+SLF31h32LSepVcXe+BQ63yvbq5qmTCy4KfFogCYm2bn68H5sDWUnX+U7MBqnM2aeEk9M7xSoqGnu+wSdY6w==
 
 "@fortawesome/vue-fontawesome@^2.0.2":
   version "2.0.2"
@@ -132,14 +127,6 @@
     postcss-url "^10.1.1"
     semver "^7.3.4"
 
-"@nuxtjs/fontawesome@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/fontawesome/-/fontawesome-1.1.2.tgz#0add6519095b392bdffb6e3ad40f3026d20f5c44"
-  integrity sha512-QAfo7hdc6hiCOohdR861oNQ+riKW/kD22bYyvaC++xXiiC1hBQcrRQ6xXd5gln+6SKCwT09+C4kGjzTgrwtr7w==
-  dependencies:
-    "@fortawesome/fontawesome-svg-core" "^1.2.27"
-    "@fortawesome/vue-fontawesome" "^0.1.9"
-
 "@nuxtjs/tailwindcss@^4.1.3":
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/@nuxtjs/tailwindcss/-/tailwindcss-4.2.1.tgz#bd0dc5e0d7f02aebe15bc2384c003687e6e5d508"
@@ -174,7 +161,7 @@
 
 "@thombruce/tnt@https://github.com/thombruce/tnt":
   version "0.1.0"
-  resolved "https://github.com/thombruce/tnt#fab890be18909536b404745ef57b70a2d89b16de"
+  resolved "https://github.com/thombruce/tnt#6ccef3b40d1fe0f804d3f84f01c034c89d4c93e2"
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.36"
     "@fortawesome/free-solid-svg-icons" "^5.15.4"
@@ -874,9 +861,9 @@ electron-to-chromium@^1.3.793:
   integrity sha512-espnsbWTuUw0a2jMwfabCc09py2ujB+FZZE1hZWn5yYijEmxzEhdhTLKUfZGjynHvdIMQ4X/Pr/t8s4eiyH/QQ==
 
 electron-to-chromium@^1.3.811:
-  version "1.3.824"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.824.tgz#9f85cc826c70b12180009d461e3b19c8121a56d2"
-  integrity sha512-Fk+5aD0HDi9i9ZKt9n2VPOZO1dQy7PV++hz2wJ/KIn+CvVfu4fny39squHtyVDPuHNuoJGAZIbuReEklqYIqfA==
+  version "1.3.826"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.826.tgz#dbe356b1546b39d83bcd47e675a9c5f61dadaed2"
+  integrity sha512-bpLc4QU4B8PYmdO4MSu2ZBTMD8lAaEXRS43C09lB31BvYwuk9UxgBRXbY5OJBw7VuMGcg2MZG5FyTaP9u4PQnw==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
