@@ -1512,7 +1512,7 @@
 
 "@thombruce/tnt@https://github.com/thombruce/tnt":
   version "0.1.0"
-  resolved "https://github.com/thombruce/tnt#aeeb11bc1e304acb20d54c63f91e6f5c2edf4c66"
+  resolved "https://github.com/thombruce/tnt#d8a3aef179c4d7490190ee405a4604f6547d7e38"
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.36"
     "@fortawesome/free-solid-svg-icons" "^5.15.4"
