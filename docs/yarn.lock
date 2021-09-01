@@ -1501,7 +1501,7 @@
 
 "@thombruce/nuxt-tnt@https://github.com/thombruce/nuxt-tnt":
   version "0.1.0"
-  resolved "https://github.com/thombruce/nuxt-tnt#4eb99c46566fc0970ad118ee4f145ecda0f6adaf"
+  resolved "https://github.com/thombruce/nuxt-tnt#114f8ff50c8f25d0ace9a54994addc5ed065f877"
   dependencies:
     "@nuxt/image" "^0.5.0"
     "@nuxtjs/tailwindcss" "^4.1.3"
@@ -1512,7 +1512,7 @@
 
 "@thombruce/tnt@https://github.com/thombruce/tnt":
   version "0.1.0"
-  resolved "https://github.com/thombruce/tnt#4729529e1c62d22061867674fde2140f49fcae91"
+  resolved "https://github.com/thombruce/tnt#aeeb11bc1e304acb20d54c63f91e6f5c2edf4c66"
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.36"
     "@fortawesome/free-solid-svg-icons" "^5.15.4"
