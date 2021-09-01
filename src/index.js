@@ -6,8 +6,15 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 export default {
   install (Vue, options) {
+    options = {
+      ...{
+        iconComponent: 'fa'
+      },
+      ...options
+    }
+
     Vue.use(VueMeta)
 
-    Vue.component('fa', FontAwesomeIcon)
+    Vue.component(options.iconComponent, FontAwesomeIcon)
   }
 }
