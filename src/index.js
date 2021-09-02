@@ -13,7 +13,9 @@ export default {
       ...options
     }
 
-    Vue.use(VueMeta)
+    if (!options.nuxt) {
+      Vue.use(VueMeta)
+    }
 
     Vue.component(options.iconComponent, FontAwesomeIcon)
   }
