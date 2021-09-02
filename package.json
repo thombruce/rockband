@@ -5,12 +5,15 @@
   "repository": "https://github.com/thombruce/tnt",
   "author": "Thom Bruce <thom@thombruce.com>",
   "license": "MIT",
-  "main": "src/index.js",
+  "main" : "dist/tnt.common.js",
+  "sideEffects": false,
   "scripts": {
-    "dev": "cd docs && yarn dev",
-    "build": "cd docs && yarn build",
-    "start": "cd docs && yarn start",
-    "generate": "cd docs && yarn generate"
+    "build" : "vue-cli-service build --target lib --name tnt ./src/index.js",
+    "lint": "vue-cli-service lint",
+    "docs:dev": "cd docs && yarn dev",
+    "docs:build": "cd docs && yarn build",
+    "docs:start": "cd docs && yarn start",
+    "docs:generate": "cd docs && yarn generate"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -18,6 +21,7 @@
     "@fortawesome/vue-fontawesome": "^2.0.2",
     "@tailwindcss/forms": "^0.3.3",
     "autoprefixer": "^9",
+    "core-js": "^3.17.1",
     "daisyui": "^1.13.2",
     "lodash": "^4.17.21",
     "luxon": "^2.0.2",
@@ -25,6 +29,35 @@
     "pug": "^3.0.2",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "theme-change": "^2.0.2",
+    "vue": "^2.6.14",
     "vue-meta": "^2.4.0"
-  }
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.5.13",
+    "@vue/cli-plugin-eslint": "^4.5.13",
+    "@vue/cli-service": "^4.5.13",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^7.17.0",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
