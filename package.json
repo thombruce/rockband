@@ -6,7 +6,6 @@
   "author": "Thom Bruce <thom@thombruce.com>",
   "license": "MIT",
   "main" : "dist/tnt.common.js",
-  "sideEffects": false,
   "scripts": {
     "build" : "vue-cli-service build --target lib --name tnt ./src/index.js",
     "lint": "vue-cli-service lint",

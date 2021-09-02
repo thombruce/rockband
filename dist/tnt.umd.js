@@ -803,7 +803,7 @@ var store = __webpack_require__("c6cd");
 (module.exports = function (key, value) {
   return store[key] || (store[key] = value !== undefined ? value : {});
 })('versions', []).push({
-  version: '3.17.1',
+  version: '3.17.2',
   mode: IS_PURE ? 'pure' : 'global',
   copyright: '© 2021 Denis Pushkarev (zloirock.ru)'
 });
@@ -4686,6 +4686,13 @@ module.exports = function (it, TAG, STATIC) {
 
 /***/ }),
 
+/***/ "d940":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "d9b5":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7423,6 +7430,9 @@ function _objectSpread2(target) {
 // EXTERNAL MODULE: ./node_modules/vue-meta/dist/vue-meta.esm.js
 var vue_meta_esm = __webpack_require__("58ca");
 
+// EXTERNAL MODULE: ./src/assets/index.css
+var assets = __webpack_require__("d940");
+
 // EXTERNAL MODULE: ./node_modules/@fortawesome/vue-fontawesome/index.es.js
 var index_es = __webpack_require__("ad3d");
 
@@ -7436,7 +7446,11 @@ var index_es = __webpack_require__("ad3d");
     options = _objectSpread2(_objectSpread2({}, {
       iconComponent: 'fa'
     }), options);
-    Vue.use(vue_meta_esm["a" /* default */]);
+
+    if (!options.nuxt) {
+      Vue.use(vue_meta_esm["a" /* default */]);
+    }
+
     Vue.component(options.iconComponent, index_es["a" /* FontAwesomeIcon */]);
   }
 });
