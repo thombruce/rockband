@@ -1,0 +1,12 @@
+{
+  "name": "tnt-monorepo",
+  "version": "0.1.0",
+  "author": "Thom Bruce <thom@thombruce.com>",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "cd docs && yarn dev",
+    "docs:build": "cd docs && yarn build",
+    "docs:start": "cd docs && yarn start",
+    "docs:generate": "cd docs && yarn generate"
+  }
+}

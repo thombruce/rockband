@@ -8,11 +8,7 @@
   "main" : "dist/tnt.common.js",
   "scripts": {
     "build" : "vue-cli-service build --target lib --name tnt ./src/index.js",
-    "lint": "vue-cli-service lint",
-    "docs:dev": "cd docs && yarn dev",
-    "docs:build": "cd docs && yarn build",
-    "docs:start": "cd docs && yarn start",
-    "docs:generate": "cd docs && yarn generate"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
