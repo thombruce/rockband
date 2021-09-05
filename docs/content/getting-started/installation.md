@@ -10,8 +10,7 @@ date: 2021-07-31T19:34:09Z
 Add TNT to your project and run the initializer:
 
 ```sh
-yarn add --dev https://github.com/thombruce/vue-cli-plugin-tnt
-vue invoke @thombruce/tnt
+vue add @thombruce/tnt
 ```
 
 ### Nuxt
@@ -19,14 +18,14 @@ vue invoke @thombruce/tnt
 Add TNT to your project:
 
 ```sh
-yarn add --dev https://github.com/thombruce/nuxt-tnt
+yarn add --dev @thombruce/nuxt-tnt
 ```
 
 Add TNT to buildModules in `nuxt.config.js`:
 
 ```js
 buildModules: [
-  '@thombruce/tnt'
+  '@thombruce/nuxt-tnt'
 ]
 ```
 

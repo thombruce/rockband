@@ -23,17 +23,27 @@ These are used to create a base set of components and plugins for my Nuxt projec
 
 ## Installation
 
+### Vue CLI
+
+Add TNT to your project and run the initializer:
+
+```sh
+vue add @thombruce/tnt
+```
+
+### Nuxt
+
 Add TNT to your project:
 
 ```sh
-yarn add --dev https://github.com/thombruce/tnt
+yarn add --dev @thombruce/nuxt-tnt
 ```
 
 Add TNT to buildModules in `nuxt.config.js`:
 
 ```js
 buildModules: [
-  '@thombruce/tnt'
+  '@thombruce/nuxt-tnt'
 ]
 ```
 
