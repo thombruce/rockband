@@ -10,7 +10,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@thombruce/tnt": "https://github.com/thombruce/tnt",
+    "@thombruce/tnt": "^0.1.0",
     "pug-plain-loader": "^1.1.0",
     "raw-loader": "^4.0.2"
   }
