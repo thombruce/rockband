@@ -16,6 +16,6 @@
     "nuxt": "^2.15.8"
   },
   "devDependencies": {
-    "@thombruce/nuxt-tnt": "file:../packages/nuxt"
+    "@thombruce/nuxt-tnt": "^0.1.2"
   }
 }
