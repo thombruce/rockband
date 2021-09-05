@@ -4,11 +4,17 @@
   "author": "Thom Bruce <thom@thombruce.com>",
   "license": "MIT",
   "private": true,
-  "workspaces": ["packages/*", "docs"],
+  "workspaces": [
+    "packages/*",
+    "docs"
+  ],
   "scripts": {
     "docs:dev": "cd docs && yarn dev",
     "docs:build": "cd docs && yarn build",
     "docs:start": "cd docs && yarn start",
     "docs:generate": "cd docs && yarn generate"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
   }
 }
