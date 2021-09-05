@@ -7,7 +7,6 @@
   "repository": "https://github.com/thombruce/nuxt-tnt",
   "author": "Thom Bruce <thom@thombruce.com>",
   "license": "MIT",
-  "devDependencies": {},
   "dependencies": {
     "@nuxt/image": "^0.5.0",
     "@nuxtjs/tailwindcss": "^4.1.3",
