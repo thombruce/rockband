@@ -8,5 +8,8 @@
     "docs:build": "cd docs && yarn build",
     "docs:start": "cd docs && yarn start",
     "docs:generate": "cd docs && yarn generate"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
   }
 }
