@@ -10,6 +10,7 @@
     "docs:generate": "cd docs && yarn generate"
   },
   "devDependencies": {
+    "@thombruce/nuxt-tnt": "^0.1.0",
     "@vue/cli-plugin-babel": "^4.5.13",
     "@vue/cli-plugin-eslint": "^4.5.13",
     "@vue/cli-service": "^4.5.13",
@@ -22,6 +23,7 @@
   "dependencies": {
     "@thombruce/nuxt-tnt": "file:packages/nuxt",
     "@thombruce/tnt": "file:packages/vue",
+    "@thombruce/tnt-docs": "file:docs",
     "@thombruce/vue-cli-plugin-tnt": "file:packages/vue-cli"
   }
 }
