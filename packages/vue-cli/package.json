@@ -6,7 +6,9 @@
   "repository": "https://github.com/thombruce/vue-cli-plugin-tnt",
   "author": "Thom Bruce <thom@thombruce.com>",
   "license": "MIT",
-  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@thombruce/tnt": "https://github.com/thombruce/tnt",
     "pug-plain-loader": "^1.1.0",
