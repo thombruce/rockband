@@ -4,6 +4,8 @@ import './assets/index.css'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+export { ThemeChange } from './components'
+
 export default {
   install (Vue, options) {
     options = {

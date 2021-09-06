@@ -17,7 +17,7 @@ import { faSwatchbook } from '@fortawesome/free-solid-svg-icons'
 // Conditionally require tailwind.config if it exists.
 let tailwindConfig
 try { tailwindConfig = require('~/tailwind.config') }
-catch(e) {}
+catch(e) { /* continue */ }
 
 const defaultThemes = [
   'light',
