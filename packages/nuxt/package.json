@@ -1,6 +1,6 @@
 {
   "name": "@thombruce/nuxt-tnt",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "My personal component library for Nuxt.js",
   "main": "src/index.js",
   "style": "src/assets/tnt.css",
