@@ -94,7 +94,7 @@ module.exports = (api, options) => {
   const postcss = readPostcssConfig(api);
   const configs = {
     dependencies: {
-      '@thombruce/tnt': 'https://github.com/thombruce/tnt'
+      '@thombruce/tnt': '^0.1.5'
     },
     postcss: {
       plugins: {
