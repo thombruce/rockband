@@ -6,6 +6,7 @@
   "author": "Thom Bruce <thom@thombruce.com>",
   "license": "MIT",
   "main": "dist/tnt.common.js",
+  "style": "src/assets/index.css",
   "publishConfig": {
     "access": "public"
   },
