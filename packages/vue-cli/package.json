@@ -1,6 +1,6 @@
 {
   "name": "@thombruce/vue-cli-plugin-tnt",
-  "version": "0.1.11",
+  "version": "0.1.13",
   "description": "vue-cli plugin to add TNT with Pug, Tailwind and DaisyUI",
   "main": "index.js",
   "repository": "https://github.com/thombruce/vue-cli-plugin-tnt",
