@@ -15,9 +15,36 @@ import { themeChange } from 'theme-change'
 import { faSwatchbook } from '@fortawesome/free-solid-svg-icons'
 
 export default {
-  props: [
-    'themes'
-  ],
+  props: {
+    themes: {
+      type: Array,
+      default: function () {
+        return [
+          'light',
+          'dark',
+          'cupcake',
+          'bumblebee',
+          'emerald',
+          'corporate',
+          'synthwave',
+          'retro',
+          'cyberpunk',
+          'valentine',
+          'halloween',
+          'garden',
+          'forest',
+          'aqua',
+          'lofi',
+          'pastel',
+          'fantasy',
+          'wireframe',
+          'black',
+          'luxury',
+          'dracula'
+        ]
+      }
+    }
+  },
   computed: {
     faSwatchbook () {
        return faSwatchbook
