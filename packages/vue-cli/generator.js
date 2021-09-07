@@ -75,7 +75,7 @@ function injectTailwindPlugins(api) {
 }
 
 function importTNT(api) {
-  const initTNT = `\nimport TNT from '@thombruce/tnt';\n\nimport '@thombruce/tnt/dist/tnt.css';\n\nVue.use(TNT);`;
+  const initTNT = `\nimport TNT from '@thombruce/tnt';\n\nimport '@thombruce/tnt/src/assets/index.css';\n\nVue.use(TNT);`;
   // inject to main.js
   const ext = api.hasPlugin('typescript') ? 'ts' : 'js';
   const mainPath = api.resolve(`./src/main.${ext}`);
