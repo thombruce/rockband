@@ -53,7 +53,7 @@ function injectPurgeConfig(api) {
             /data-theme$/,\n\
           ]\n\
         },\n\
-        content: ['./public/**/*.html', './src/**/*.vue']\n\
+        content: ['./public/**/*.html', './src/**/*.vue', './node_modules/@thombruce/**/*.vue']\n\
       }",
     ),
   );
