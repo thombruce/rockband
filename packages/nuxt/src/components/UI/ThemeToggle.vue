@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { ThemeChange } from '@thombruce/tnt'
+import ThemeChange from '@thombruce/tnt/src/components/ThemeChange.vue'
 
 // Conditionally require tailwind.config if it exists.
 let tailwindConfig
