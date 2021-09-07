@@ -141,31 +141,6 @@ module.exports = Object.keys || function keys(O) {
 
 /***/ }),
 
-/***/ "0e39":
-/***/ (function(module, exports, __webpack_require__) {
-
-var has = __webpack_require__("f1a7");
-var toObject = __webpack_require__("37d1");
-var sharedKey = __webpack_require__("332c");
-var CORRECT_PROTOTYPE_GETTER = __webpack_require__("802e");
-
-var IE_PROTO = sharedKey('IE_PROTO');
-var ObjectPrototype = Object.prototype;
-
-// `Object.getPrototypeOf` method
-// https://tc39.es/ecma262/#sec-object.getprototypeof
-// eslint-disable-next-line es/no-object-getprototypeof -- safe
-module.exports = CORRECT_PROTOTYPE_GETTER ? Object.getPrototypeOf : function (O) {
-  O = toObject(O);
-  if (has(O, IE_PROTO)) return O[IE_PROTO];
-  if (typeof O.constructor == 'function' && O instanceof O.constructor) {
-    return O.constructor.prototype;
-  } return O instanceof Object ? ObjectPrototype : null;
-};
-
-
-/***/ }),
-
 /***/ "0e93":
 /***/ (function(module, exports) {
 
@@ -437,56 +412,12 @@ var assets = __webpack_require__("d940");
 // EXTERNAL MODULE: /Users/thombruce/Developer/thombruce/tnt/node_modules/@fortawesome/vue-fontawesome/index.es.js
 var index_es = __webpack_require__("dc04");
 
-// CONCATENATED MODULE: /Users/thombruce/Developer/thombruce/tnt/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"a2809e56-vue-loader-template"}!/Users/thombruce/Developer/thombruce/tnt/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/Users/thombruce/Developer/thombruce/tnt/node_modules/pug-plain-loader!/Users/thombruce/Developer/thombruce/tnt/node_modules/cache-loader/dist/cjs.js??ref--0-0!/Users/thombruce/Developer/thombruce/tnt/node_modules/vue-loader/lib??vue-loader-options!./src/components/ThemeChange.vue?vue&type=template&id=4476d031&lang=pug&
+// CONCATENATED MODULE: /Users/thombruce/Developer/thombruce/tnt/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"a2809e56-vue-loader-template"}!/Users/thombruce/Developer/thombruce/tnt/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/Users/thombruce/Developer/thombruce/tnt/node_modules/pug-plain-loader!/Users/thombruce/Developer/thombruce/tnt/node_modules/cache-loader/dist/cjs.js??ref--0-0!/Users/thombruce/Developer/thombruce/tnt/node_modules/vue-loader/lib??vue-loader-options!./src/components/ThemeChange.vue?vue&type=template&id=0359f532&lang=pug&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.themes)?_c('div',{staticClass:"dropdown dropdown-end"},[_c('div',{staticClass:"btn btn-ghost",attrs:{"tabindex":"0"}},[_c('fa',{attrs:{"icon":_vm.faSwatchbook}}),_vm._v("Theme")],1),_c('div',{staticClass:"overflow-y-auto shadow dropdown-content h-96 w-52 rounded-box bg-base-200 text-base-content"},[_c('ul',{staticClass:"menu"},_vm._l((_vm.themes),function(theme,index){return _c('li',[_c('a',{attrs:{"tabindex":"0","data-set-theme":theme,"data-act-class":"active"}},[_vm._v(_vm._s(_vm._f("titleize")(theme)))])])}),0)])]):_vm._e()}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/ThemeChange.vue?vue&type=template&id=4476d031&lang=pug&
-
-// EXTERNAL MODULE: /Users/thombruce/Developer/thombruce/tnt/node_modules/core-js/modules/es.symbol.description.js
-var es_symbol_description = __webpack_require__("8d0f");
-
-// EXTERNAL MODULE: /Users/thombruce/Developer/thombruce/tnt/node_modules/core-js/modules/es.object.to-string.js
-var es_object_to_string = __webpack_require__("ef1f");
-
-// EXTERNAL MODULE: /Users/thombruce/Developer/thombruce/tnt/node_modules/core-js/modules/es.symbol.iterator.js
-var es_symbol_iterator = __webpack_require__("68b8");
-
-// EXTERNAL MODULE: /Users/thombruce/Developer/thombruce/tnt/node_modules/core-js/modules/es.array.iterator.js
-var es_array_iterator = __webpack_require__("9531");
-
-// EXTERNAL MODULE: /Users/thombruce/Developer/thombruce/tnt/node_modules/core-js/modules/es.string.iterator.js
-var es_string_iterator = __webpack_require__("f3b8");
-
-// EXTERNAL MODULE: /Users/thombruce/Developer/thombruce/tnt/node_modules/core-js/modules/web.dom-collections.iterator.js
-var web_dom_collections_iterator = __webpack_require__("918c");
-
-// CONCATENATED MODULE: /Users/thombruce/Developer/thombruce/tnt/node_modules/@babel/runtime/helpers/esm/typeof.js
-
-
-
-
-
-
-
-function _typeof(obj) {
-  "@babel/helpers - typeof";
-
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    _typeof = function _typeof(obj) {
-      return typeof obj;
-    };
-  } else {
-    _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
-
-  return _typeof(obj);
-}
-// EXTERNAL MODULE: /Users/thombruce/Developer/thombruce/tnt/node_modules/core-js/modules/es.array.map.js
-var es_array_map = __webpack_require__("cfce");
+// CONCATENATED MODULE: ./src/components/ThemeChange.vue?vue&type=template&id=0359f532&lang=pug&
 
 // EXTERNAL MODULE: /Users/thombruce/Developer/thombruce/tnt/node_modules/theme-change/index.js
 var theme_change = __webpack_require__("61fc");
@@ -6515,9 +6446,6 @@ var _iconsCache = {
 
 
 // CONCATENATED MODULE: /Users/thombruce/Developer/thombruce/tnt/node_modules/cache-loader/dist/cjs.js??ref--12-0!/Users/thombruce/Developer/thombruce/tnt/node_modules/thread-loader/dist/cjs.js!/Users/thombruce/Developer/thombruce/tnt/node_modules/babel-loader/lib!/Users/thombruce/Developer/thombruce/tnt/node_modules/cache-loader/dist/cjs.js??ref--0-0!/Users/thombruce/Developer/thombruce/tnt/node_modules/vue-loader/lib??vue-loader-options!./src/components/ThemeChange.vue?vue&type=script&lang=js&
-
-
-
 //
 //
 //
@@ -6530,28 +6458,9 @@ var _iconsCache = {
 //
 //
 
- // Conditionally require tailwind.config if it exists.
 
-var tailwindConfig;
-
-try {
-  tailwindConfig = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module '~/tailwind.config'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-} catch (e) {
-  /* continue */
-}
-
-var defaultThemes = ['light', 'dark', 'cupcake', 'bumblebee', 'emerald', 'corporate', 'synthwave', 'retro', 'cyberpunk', 'valentine', 'halloween', 'garden', 'forest', 'aqua', 'lofi', 'pastel', 'fantasy', 'wireframe', 'black', 'luxury', 'dracula'];
-var themes = tailwindConfig && tailwindConfig.daisyui && tailwindConfig.daisyui.themes ? Array.isArray(tailwindConfig.daisyui.themes) ? tailwindConfig.daisyui.themes : defaultThemes : defaultThemes; // TODO: Differentiate between false and undefined. Undefined should show defaultThemes, false should not.
-
-var themeKeys = themes.map(function (theme) {
-  return _typeof(theme) === 'object' ? Object.keys(theme).pop() : theme;
-});
 /* harmony default export */ var ThemeChangevue_type_script_lang_js_ = ({
-  data: function data() {
-    return {
-      themes: themeKeys
-    };
-  },
+  props: ['themes'],
   computed: {
     faSwatchbook: function faSwatchbook() {
       return index_es_faSwatchbook;
@@ -6841,128 +6750,6 @@ $({ target: 'Array', proto: true, forced: !HAS_SPECIES_SUPPORT }, {
 
 /***/ }),
 
-/***/ "2df4":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var $ = __webpack_require__("6b1d");
-var createIteratorConstructor = __webpack_require__("2e3f");
-var getPrototypeOf = __webpack_require__("0e39");
-var setPrototypeOf = __webpack_require__("c1a2");
-var setToStringTag = __webpack_require__("fa46");
-var createNonEnumerableProperty = __webpack_require__("5b12");
-var redefine = __webpack_require__("b8ba");
-var wellKnownSymbol = __webpack_require__("7d53");
-var IS_PURE = __webpack_require__("0e93");
-var Iterators = __webpack_require__("5bb7");
-var IteratorsCore = __webpack_require__("ff89");
-
-var IteratorPrototype = IteratorsCore.IteratorPrototype;
-var BUGGY_SAFARI_ITERATORS = IteratorsCore.BUGGY_SAFARI_ITERATORS;
-var ITERATOR = wellKnownSymbol('iterator');
-var KEYS = 'keys';
-var VALUES = 'values';
-var ENTRIES = 'entries';
-
-var returnThis = function () { return this; };
-
-module.exports = function (Iterable, NAME, IteratorConstructor, next, DEFAULT, IS_SET, FORCED) {
-  createIteratorConstructor(IteratorConstructor, NAME, next);
-
-  var getIterationMethod = function (KIND) {
-    if (KIND === DEFAULT && defaultIterator) return defaultIterator;
-    if (!BUGGY_SAFARI_ITERATORS && KIND in IterablePrototype) return IterablePrototype[KIND];
-    switch (KIND) {
-      case KEYS: return function keys() { return new IteratorConstructor(this, KIND); };
-      case VALUES: return function values() { return new IteratorConstructor(this, KIND); };
-      case ENTRIES: return function entries() { return new IteratorConstructor(this, KIND); };
-    } return function () { return new IteratorConstructor(this); };
-  };
-
-  var TO_STRING_TAG = NAME + ' Iterator';
-  var INCORRECT_VALUES_NAME = false;
-  var IterablePrototype = Iterable.prototype;
-  var nativeIterator = IterablePrototype[ITERATOR]
-    || IterablePrototype['@@iterator']
-    || DEFAULT && IterablePrototype[DEFAULT];
-  var defaultIterator = !BUGGY_SAFARI_ITERATORS && nativeIterator || getIterationMethod(DEFAULT);
-  var anyNativeIterator = NAME == 'Array' ? IterablePrototype.entries || nativeIterator : nativeIterator;
-  var CurrentIteratorPrototype, methods, KEY;
-
-  // fix native
-  if (anyNativeIterator) {
-    CurrentIteratorPrototype = getPrototypeOf(anyNativeIterator.call(new Iterable()));
-    if (IteratorPrototype !== Object.prototype && CurrentIteratorPrototype.next) {
-      if (!IS_PURE && getPrototypeOf(CurrentIteratorPrototype) !== IteratorPrototype) {
-        if (setPrototypeOf) {
-          setPrototypeOf(CurrentIteratorPrototype, IteratorPrototype);
-        } else if (typeof CurrentIteratorPrototype[ITERATOR] != 'function') {
-          createNonEnumerableProperty(CurrentIteratorPrototype, ITERATOR, returnThis);
-        }
-      }
-      // Set @@toStringTag to native iterators
-      setToStringTag(CurrentIteratorPrototype, TO_STRING_TAG, true, true);
-      if (IS_PURE) Iterators[TO_STRING_TAG] = returnThis;
-    }
-  }
-
-  // fix Array.prototype.{ values, @@iterator }.name in V8 / FF
-  if (DEFAULT == VALUES && nativeIterator && nativeIterator.name !== VALUES) {
-    INCORRECT_VALUES_NAME = true;
-    defaultIterator = function values() { return nativeIterator.call(this); };
-  }
-
-  // define iterator
-  if ((!IS_PURE || FORCED) && IterablePrototype[ITERATOR] !== defaultIterator) {
-    createNonEnumerableProperty(IterablePrototype, ITERATOR, defaultIterator);
-  }
-  Iterators[NAME] = defaultIterator;
-
-  // export additional methods
-  if (DEFAULT) {
-    methods = {
-      values: getIterationMethod(VALUES),
-      keys: IS_SET ? defaultIterator : getIterationMethod(KEYS),
-      entries: getIterationMethod(ENTRIES)
-    };
-    if (FORCED) for (KEY in methods) {
-      if (BUGGY_SAFARI_ITERATORS || INCORRECT_VALUES_NAME || !(KEY in IterablePrototype)) {
-        redefine(IterablePrototype, KEY, methods[KEY]);
-      }
-    } else $({ target: NAME, proto: true, forced: BUGGY_SAFARI_ITERATORS || INCORRECT_VALUES_NAME }, methods);
-  }
-
-  return methods;
-};
-
-
-/***/ }),
-
-/***/ "2e3f":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var IteratorPrototype = __webpack_require__("ff89").IteratorPrototype;
-var create = __webpack_require__("82e8");
-var createPropertyDescriptor = __webpack_require__("9618");
-var setToStringTag = __webpack_require__("fa46");
-var Iterators = __webpack_require__("5bb7");
-
-var returnThis = function () { return this; };
-
-module.exports = function (IteratorConstructor, NAME, next) {
-  var TO_STRING_TAG = NAME + ' Iterator';
-  IteratorConstructor.prototype = create(IteratorPrototype, { next: createPropertyDescriptor(1, next) });
-  setToStringTag(IteratorConstructor, TO_STRING_TAG, false, true);
-  Iterators[TO_STRING_TAG] = returnThis;
-  return IteratorConstructor;
-};
-
-
-/***/ }),
-
 /***/ "332c":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7002,21 +6789,6 @@ var requireObjectCoercible = __webpack_require__("730c");
 module.exports = function (argument) {
   return Object(requireObjectCoercible(argument));
 };
-
-
-/***/ }),
-
-/***/ "3cec":
-/***/ (function(module, exports, __webpack_require__) {
-
-var wellKnownSymbol = __webpack_require__("7d53");
-
-var TO_STRING_TAG = wellKnownSymbol('toStringTag');
-var test = {};
-
-test[TO_STRING_TAG] = 'z';
-
-module.exports = String(test) === '[object z]';
 
 
 /***/ }),
@@ -9656,23 +9428,6 @@ module.exports = version && +version;
 
 /***/ }),
 
-/***/ "5268":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var TO_STRING_TAG_SUPPORT = __webpack_require__("3cec");
-var classof = __webpack_require__("da06");
-
-// `Object.prototype.toString` method implementation
-// https://tc39.es/ecma262/#sec-object.prototype.tostring
-module.exports = TO_STRING_TAG_SUPPORT ? {}.toString : function toString() {
-  return '[object ' + classof(this) + ']';
-};
-
-
-/***/ }),
-
 /***/ "5428":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9847,14 +9602,6 @@ module.exports = DESCRIPTORS ? function (object, key, value) {
 
 /***/ }),
 
-/***/ "5bb7":
-/***/ (function(module, exports) {
-
-module.exports = {};
-
-
-/***/ }),
-
 /***/ "61fc":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9886,18 +9633,6 @@ var hiddenKeys = enumBugKeys.concat('length', 'prototype');
 exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
   return internalObjectKeys(O, hiddenKeys);
 };
-
-
-/***/ }),
-
-/***/ "68b8":
-/***/ (function(module, exports, __webpack_require__) {
-
-var defineWellKnownSymbol = __webpack_require__("6a89");
-
-// `Symbol.iterator` well-known symbol
-// https://tc39.es/ecma262/#sec-symbol.iterator
-defineWellKnownSymbol('iterator');
 
 
 /***/ }),
@@ -10170,21 +9905,6 @@ module.exports = function (METHOD_NAME, argument) {
 
 /***/ }),
 
-/***/ "802e":
-/***/ (function(module, exports, __webpack_require__) {
-
-var fails = __webpack_require__("72df");
-
-module.exports = !fails(function () {
-  function F() { /* empty */ }
-  F.prototype.constructor = null;
-  // eslint-disable-next-line es/no-object-getprototypeof -- required for testing
-  return Object.getPrototypeOf(new F()) !== F.prototype;
-});
-
-
-/***/ }),
-
 /***/ "82e8":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10321,171 +10041,12 @@ module.exports = function (argument) {
 
 /***/ }),
 
-/***/ "8d0f":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-// `Symbol.prototype.description` getter
-// https://tc39.es/ecma262/#sec-symbol.prototype.description
-
-var $ = __webpack_require__("6b1d");
-var DESCRIPTORS = __webpack_require__("d4cb");
-var global = __webpack_require__("f498");
-var has = __webpack_require__("f1a7");
-var isObject = __webpack_require__("7526");
-var defineProperty = __webpack_require__("abdf").f;
-var copyConstructorProperties = __webpack_require__("b634");
-
-var NativeSymbol = global.Symbol;
-
-if (DESCRIPTORS && typeof NativeSymbol == 'function' && (!('description' in NativeSymbol.prototype) ||
-  // Safari 12 bug
-  NativeSymbol().description !== undefined
-)) {
-  var EmptyStringDescriptionStore = {};
-  // wrap Symbol constructor for correct work with undefined description
-  var SymbolWrapper = function Symbol() {
-    var description = arguments.length < 1 || arguments[0] === undefined ? undefined : String(arguments[0]);
-    var result = this instanceof SymbolWrapper
-      ? new NativeSymbol(description)
-      // in Edge 13, String(Symbol(undefined)) === 'Symbol(undefined)'
-      : description === undefined ? NativeSymbol() : NativeSymbol(description);
-    if (description === '') EmptyStringDescriptionStore[result] = true;
-    return result;
-  };
-  copyConstructorProperties(SymbolWrapper, NativeSymbol);
-  var symbolPrototype = SymbolWrapper.prototype = NativeSymbol.prototype;
-  symbolPrototype.constructor = SymbolWrapper;
-
-  var symbolToString = symbolPrototype.toString;
-  var nativeSymbol = String(NativeSymbol('test')) == 'Symbol(test)';
-  var regexp = /^Symbol\((.*)\)[^)]+$/;
-  defineProperty(symbolPrototype, 'description', {
-    configurable: true,
-    get: function description() {
-      var symbol = isObject(this) ? this.valueOf() : this;
-      var string = symbolToString.call(symbol);
-      if (has(EmptyStringDescriptionStore, symbol)) return '';
-      var desc = nativeSymbol ? string.slice(7, -1) : string.replace(regexp, '$1');
-      return desc === '' ? undefined : desc;
-    }
-  });
-
-  $({ global: true, forced: true }, {
-    Symbol: SymbolWrapper
-  });
-}
-
-
-/***/ }),
-
-/***/ "918c":
-/***/ (function(module, exports, __webpack_require__) {
-
-var global = __webpack_require__("f498");
-var DOMIterables = __webpack_require__("130d");
-var ArrayIteratorMethods = __webpack_require__("9531");
-var createNonEnumerableProperty = __webpack_require__("5b12");
-var wellKnownSymbol = __webpack_require__("7d53");
-
-var ITERATOR = wellKnownSymbol('iterator');
-var TO_STRING_TAG = wellKnownSymbol('toStringTag');
-var ArrayValues = ArrayIteratorMethods.values;
-
-for (var COLLECTION_NAME in DOMIterables) {
-  var Collection = global[COLLECTION_NAME];
-  var CollectionPrototype = Collection && Collection.prototype;
-  if (CollectionPrototype) {
-    // some Chrome versions have non-configurable methods on DOMTokenList
-    if (CollectionPrototype[ITERATOR] !== ArrayValues) try {
-      createNonEnumerableProperty(CollectionPrototype, ITERATOR, ArrayValues);
-    } catch (error) {
-      CollectionPrototype[ITERATOR] = ArrayValues;
-    }
-    if (!CollectionPrototype[TO_STRING_TAG]) {
-      createNonEnumerableProperty(CollectionPrototype, TO_STRING_TAG, COLLECTION_NAME);
-    }
-    if (DOMIterables[COLLECTION_NAME]) for (var METHOD_NAME in ArrayIteratorMethods) {
-      // some Chrome versions have non-configurable methods on DOMTokenList
-      if (CollectionPrototype[METHOD_NAME] !== ArrayIteratorMethods[METHOD_NAME]) try {
-        createNonEnumerableProperty(CollectionPrototype, METHOD_NAME, ArrayIteratorMethods[METHOD_NAME]);
-      } catch (error) {
-        CollectionPrototype[METHOD_NAME] = ArrayIteratorMethods[METHOD_NAME];
-      }
-    }
-  }
-}
-
-
-/***/ }),
-
 /***/ "9324":
 /***/ (function(module, exports, __webpack_require__) {
 
 var getBuiltIn = __webpack_require__("5428");
 
 module.exports = getBuiltIn('document', 'documentElement');
-
-
-/***/ }),
-
-/***/ "9531":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var toIndexedObject = __webpack_require__("378c");
-var addToUnscopables = __webpack_require__("ed2b");
-var Iterators = __webpack_require__("5bb7");
-var InternalStateModule = __webpack_require__("cdcd");
-var defineIterator = __webpack_require__("2df4");
-
-var ARRAY_ITERATOR = 'Array Iterator';
-var setInternalState = InternalStateModule.set;
-var getInternalState = InternalStateModule.getterFor(ARRAY_ITERATOR);
-
-// `Array.prototype.entries` method
-// https://tc39.es/ecma262/#sec-array.prototype.entries
-// `Array.prototype.keys` method
-// https://tc39.es/ecma262/#sec-array.prototype.keys
-// `Array.prototype.values` method
-// https://tc39.es/ecma262/#sec-array.prototype.values
-// `Array.prototype[@@iterator]` method
-// https://tc39.es/ecma262/#sec-array.prototype-@@iterator
-// `CreateArrayIterator` internal method
-// https://tc39.es/ecma262/#sec-createarrayiterator
-module.exports = defineIterator(Array, 'Array', function (iterated, kind) {
-  setInternalState(this, {
-    type: ARRAY_ITERATOR,
-    target: toIndexedObject(iterated), // target
-    index: 0,                          // next index
-    kind: kind                         // kind
-  });
-// `%ArrayIteratorPrototype%.next` method
-// https://tc39.es/ecma262/#sec-%arrayiteratorprototype%.next
-}, function () {
-  var state = getInternalState(this);
-  var target = state.target;
-  var kind = state.kind;
-  var index = state.index++;
-  if (!target || index >= target.length) {
-    state.target = undefined;
-    return { value: undefined, done: true };
-  }
-  if (kind == 'keys') return { value: index, done: false };
-  if (kind == 'values') return { value: target[index], done: false };
-  return { value: [index, target[index]], done: false };
-}, 'values');
-
-// argumentsList[@@iterator] is %ArrayProto_values%
-// https://tc39.es/ecma262/#sec-createunmappedargumentsobject
-// https://tc39.es/ecma262/#sec-createmappedargumentsobject
-Iterators.Arguments = Iterators.Array;
-
-// https://tc39.es/ecma262/#sec-array.prototype-@@unscopables
-addToUnscopables('keys');
-addToUnscopables('values');
-addToUnscopables('entries');
 
 
 /***/ }),
@@ -10651,41 +10212,6 @@ module.exports = function (target, source) {
 
 /***/ }),
 
-/***/ "b7fb":
-/***/ (function(module, exports, __webpack_require__) {
-
-var toInteger = __webpack_require__("8bb2");
-var toString = __webpack_require__("2a3e");
-var requireObjectCoercible = __webpack_require__("730c");
-
-// `String.prototype.codePointAt` methods implementation
-var createMethod = function (CONVERT_TO_STRING) {
-  return function ($this, pos) {
-    var S = toString(requireObjectCoercible($this));
-    var position = toInteger(pos);
-    var size = S.length;
-    var first, second;
-    if (position < 0 || position >= size) return CONVERT_TO_STRING ? '' : undefined;
-    first = S.charCodeAt(position);
-    return first < 0xD800 || first > 0xDBFF || position + 1 === size
-      || (second = S.charCodeAt(position + 1)) < 0xDC00 || second > 0xDFFF
-        ? CONVERT_TO_STRING ? S.charAt(position) : first
-        : CONVERT_TO_STRING ? S.slice(position, position + 2) : (first - 0xD800 << 10) + (second - 0xDC00) + 0x10000;
-  };
-};
-
-module.exports = {
-  // `String.prototype.codePointAt` method
-  // https://tc39.es/ecma262/#sec-string.prototype.codepointat
-  codeAt: createMethod(false),
-  // `String.prototype.at` method
-  // https://github.com/mathiasbynens/String.prototype.at
-  charAt: createMethod(true)
-};
-
-
-/***/ }),
-
 /***/ "b8ba":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10753,39 +10279,6 @@ module.exports = DESCRIPTORS ? Object.defineProperties : function defineProperti
   while (length > index) definePropertyModule.f(O, key = keys[index++], Properties[key]);
   return O;
 };
-
-
-/***/ }),
-
-/***/ "c1a2":
-/***/ (function(module, exports, __webpack_require__) {
-
-/* eslint-disable no-proto -- safe */
-var anObject = __webpack_require__("157c");
-var aPossiblePrototype = __webpack_require__("f3e4");
-
-// `Object.setPrototypeOf` method
-// https://tc39.es/ecma262/#sec-object.setprototypeof
-// Works with __proto__ only. Old v8 can't work with null proto objects.
-// eslint-disable-next-line es/no-object-setprototypeof -- safe
-module.exports = Object.setPrototypeOf || ('__proto__' in {} ? function () {
-  var CORRECT_SETTER = false;
-  var test = {};
-  var setter;
-  try {
-    // eslint-disable-next-line es/no-object-getownpropertydescriptor -- safe
-    setter = Object.getOwnPropertyDescriptor(Object.prototype, '__proto__').set;
-    setter.call(test, []);
-    CORRECT_SETTER = test instanceof Array;
-  } catch (error) { /* empty */ }
-  return function setPrototypeOf(O, proto) {
-    anObject(O);
-    aPossiblePrototype(proto);
-    if (CORRECT_SETTER) setter.call(O, proto);
-    else O.__proto__ = proto;
-    return O;
-  };
-}() : undefined);
 
 
 /***/ }),
@@ -10913,29 +10406,6 @@ module.exports = {
   enforce: enforce,
   getterFor: getterFor
 };
-
-
-/***/ }),
-
-/***/ "cfce":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var $ = __webpack_require__("6b1d");
-var $map = __webpack_require__("d054").map;
-var arrayMethodHasSpeciesSupport = __webpack_require__("189b");
-
-var HAS_SPECIES_SUPPORT = arrayMethodHasSpeciesSupport('map');
-
-// `Array.prototype.map` method
-// https://tc39.es/ecma262/#sec-array.prototype.map
-// with adding support of @@species
-$({ target: 'Array', proto: true, forced: !HAS_SPECIES_SUPPORT }, {
-  map: function map(callbackfn /* , thisArg */) {
-    return $map(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
-  }
-});
 
 
 /***/ }),
@@ -11375,39 +10845,6 @@ hiddenKeys[HIDDEN] = true;
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ "da06":
-/***/ (function(module, exports, __webpack_require__) {
-
-var TO_STRING_TAG_SUPPORT = __webpack_require__("3cec");
-var classofRaw = __webpack_require__("6a61");
-var wellKnownSymbol = __webpack_require__("7d53");
-
-var TO_STRING_TAG = wellKnownSymbol('toStringTag');
-// ES3 wrong here
-var CORRECT_ARGUMENTS = classofRaw(function () { return arguments; }()) == 'Arguments';
-
-// fallback for IE11 Script Access Denied error
-var tryGet = function (it, key) {
-  try {
-    return it[key];
-  } catch (error) { /* empty */ }
-};
-
-// getting tag from ES6+ `Object.prototype.toString`
-module.exports = TO_STRING_TAG_SUPPORT ? classofRaw : function (it) {
-  var O, tag, result;
-  return it === undefined ? 'Undefined' : it === null ? 'Null'
-    // @@toStringTag case
-    : typeof (tag = tryGet(O = Object(it), TO_STRING_TAG)) == 'string' ? tag
-    // builtinTag case
-    : CORRECT_ARGUMENTS ? classofRaw(O)
-    // ES3 arguments fallback
-    : (result = classofRaw(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : result;
-};
-
 
 /***/ }),
 
@@ -12104,33 +11541,6 @@ module.exports = isForced;
 
 /***/ }),
 
-/***/ "ed2b":
-/***/ (function(module, exports, __webpack_require__) {
-
-var wellKnownSymbol = __webpack_require__("7d53");
-var create = __webpack_require__("82e8");
-var definePropertyModule = __webpack_require__("abdf");
-
-var UNSCOPABLES = wellKnownSymbol('unscopables');
-var ArrayPrototype = Array.prototype;
-
-// Array.prototype[@@unscopables]
-// https://tc39.es/ecma262/#sec-array.prototype-@@unscopables
-if (ArrayPrototype[UNSCOPABLES] == undefined) {
-  definePropertyModule.f(ArrayPrototype, UNSCOPABLES, {
-    configurable: true,
-    value: create(null)
-  });
-}
-
-// add a key to Array.prototype[@@unscopables]
-module.exports = function (key) {
-  ArrayPrototype[UNSCOPABLES][key] = true;
-};
-
-
-/***/ }),
-
 /***/ "ee58":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12161,22 +11571,6 @@ module.exports.f = function getOwnPropertyNames(it) {
 
 /***/ }),
 
-/***/ "ef1f":
-/***/ (function(module, exports, __webpack_require__) {
-
-var TO_STRING_TAG_SUPPORT = __webpack_require__("3cec");
-var redefine = __webpack_require__("b8ba");
-var toString = __webpack_require__("5268");
-
-// `Object.prototype.toString` method
-// https://tc39.es/ecma262/#sec-object.prototype.tostring
-if (!TO_STRING_TAG_SUPPORT) {
-  redefine(Object.prototype, 'toString', toString, { unsafe: true });
-}
-
-
-/***/ }),
-
 /***/ "f1a7":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12203,58 +11597,6 @@ var EXISTS = isObject(document) && isObject(document.createElement);
 
 module.exports = function (it) {
   return EXISTS ? document.createElement(it) : {};
-};
-
-
-/***/ }),
-
-/***/ "f3b8":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var charAt = __webpack_require__("b7fb").charAt;
-var toString = __webpack_require__("2a3e");
-var InternalStateModule = __webpack_require__("cdcd");
-var defineIterator = __webpack_require__("2df4");
-
-var STRING_ITERATOR = 'String Iterator';
-var setInternalState = InternalStateModule.set;
-var getInternalState = InternalStateModule.getterFor(STRING_ITERATOR);
-
-// `String.prototype[@@iterator]` method
-// https://tc39.es/ecma262/#sec-string.prototype-@@iterator
-defineIterator(String, 'String', function (iterated) {
-  setInternalState(this, {
-    type: STRING_ITERATOR,
-    string: toString(iterated),
-    index: 0
-  });
-// `%StringIteratorPrototype%.next` method
-// https://tc39.es/ecma262/#sec-%stringiteratorprototype%.next
-}, function next() {
-  var state = getInternalState(this);
-  var string = state.string;
-  var index = state.index;
-  var point;
-  if (index >= string.length) return { value: undefined, done: true };
-  point = charAt(string, index);
-  state.index += point.length;
-  return { value: point, done: false };
-});
-
-
-/***/ }),
-
-/***/ "f3e4":
-/***/ (function(module, exports, __webpack_require__) {
-
-var isObject = __webpack_require__("7526");
-
-module.exports = function (it) {
-  if (!isObject(it) && it !== null) {
-    throw TypeError("Can't set " + String(it) + ' as a prototype');
-  } return it;
 };
 
 
@@ -14378,60 +13720,6 @@ var isSymbol = __webpack_require__("cfd1");
 module.exports = function (argument) {
   var key = toPrimitive(argument, 'string');
   return isSymbol(key) ? key : String(key);
-};
-
-
-/***/ }),
-
-/***/ "ff89":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var fails = __webpack_require__("72df");
-var getPrototypeOf = __webpack_require__("0e39");
-var createNonEnumerableProperty = __webpack_require__("5b12");
-var has = __webpack_require__("f1a7");
-var wellKnownSymbol = __webpack_require__("7d53");
-var IS_PURE = __webpack_require__("0e93");
-
-var ITERATOR = wellKnownSymbol('iterator');
-var BUGGY_SAFARI_ITERATORS = false;
-
-var returnThis = function () { return this; };
-
-// `%IteratorPrototype%` object
-// https://tc39.es/ecma262/#sec-%iteratorprototype%-object
-var IteratorPrototype, PrototypeOfArrayIteratorPrototype, arrayIterator;
-
-/* eslint-disable es/no-array-prototype-keys -- safe */
-if ([].keys) {
-  arrayIterator = [].keys();
-  // Safari 8 has buggy iterators w/o `next`
-  if (!('next' in arrayIterator)) BUGGY_SAFARI_ITERATORS = true;
-  else {
-    PrototypeOfArrayIteratorPrototype = getPrototypeOf(getPrototypeOf(arrayIterator));
-    if (PrototypeOfArrayIteratorPrototype !== Object.prototype) IteratorPrototype = PrototypeOfArrayIteratorPrototype;
-  }
-}
-
-var NEW_ITERATOR_PROTOTYPE = IteratorPrototype == undefined || fails(function () {
-  var test = {};
-  // FF44- legacy iterators case
-  return IteratorPrototype[ITERATOR].call(test) !== test;
-});
-
-if (NEW_ITERATOR_PROTOTYPE) IteratorPrototype = {};
-
-// `%IteratorPrototype%[@@iterator]()` method
-// https://tc39.es/ecma262/#sec-%iteratorprototype%-@@iterator
-if ((!IS_PURE || NEW_ITERATOR_PROTOTYPE) && !has(IteratorPrototype, ITERATOR)) {
-  createNonEnumerableProperty(IteratorPrototype, ITERATOR, returnThis);
-}
-
-module.exports = {
-  IteratorPrototype: IteratorPrototype,
-  BUGGY_SAFARI_ITERATORS: BUGGY_SAFARI_ITERATORS
 };
 
 
