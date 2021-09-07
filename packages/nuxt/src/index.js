@@ -33,6 +33,7 @@ export default async function () {
             `${join(__dirname, 'plugins')}/**/*.{js,ts}`,
             'content/**/*.md',
             'node_modules/@thombruce/**/*.vue',
+            '../node_modules/@thombruce/**/*.vue',
           ]
         },
         plugins: [
