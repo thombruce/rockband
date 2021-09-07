@@ -13,7 +13,7 @@ module.exports = {
       'plugins/**/*.{js,ts}',
       'content/**/*.md',
       'node_modules/@thombruce/**/*.vue',
-      '../node_modules/\@thombruce/**/*.vue', // Because this is a nested package.
+      '../node_modules/\\@thombruce/**/*.vue', // Because this is a nested package.
     ]
   },
   daisyui: {
