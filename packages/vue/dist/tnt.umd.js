@@ -412,12 +412,12 @@ var assets = __webpack_require__("d940");
 // EXTERNAL MODULE: /Users/thombruce/Developer/thombruce/tnt/node_modules/@fortawesome/vue-fontawesome/index.es.js
 var index_es = __webpack_require__("dc04");
 
-// CONCATENATED MODULE: /Users/thombruce/Developer/thombruce/tnt/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"a2809e56-vue-loader-template"}!/Users/thombruce/Developer/thombruce/tnt/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/Users/thombruce/Developer/thombruce/tnt/node_modules/pug-plain-loader!/Users/thombruce/Developer/thombruce/tnt/node_modules/cache-loader/dist/cjs.js??ref--0-0!/Users/thombruce/Developer/thombruce/tnt/node_modules/vue-loader/lib??vue-loader-options!./src/components/ThemeChange.vue?vue&type=template&id=0359f532&lang=pug&
+// CONCATENATED MODULE: /Users/thombruce/Developer/thombruce/tnt/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"a2809e56-vue-loader-template"}!/Users/thombruce/Developer/thombruce/tnt/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!/Users/thombruce/Developer/thombruce/tnt/node_modules/pug-plain-loader!/Users/thombruce/Developer/thombruce/tnt/node_modules/cache-loader/dist/cjs.js??ref--0-0!/Users/thombruce/Developer/thombruce/tnt/node_modules/vue-loader/lib??vue-loader-options!./src/components/ThemeChange.vue?vue&type=template&id=32dfcb85&lang=pug&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.themes)?_c('div',{staticClass:"dropdown dropdown-end"},[_c('div',{staticClass:"btn btn-ghost",attrs:{"tabindex":"0"}},[_c('fa',{attrs:{"icon":_vm.faSwatchbook}}),_vm._v("Theme")],1),_c('div',{staticClass:"overflow-y-auto shadow dropdown-content h-96 w-52 rounded-box bg-base-200 text-base-content"},[_c('ul',{staticClass:"menu"},_vm._l((_vm.themes),function(theme,index){return _c('li',[_c('a',{attrs:{"tabindex":"0","data-set-theme":theme,"data-act-class":"active"}},[_vm._v(_vm._s(_vm._f("titleize")(theme)))])])}),0)])]):_vm._e()}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/ThemeChange.vue?vue&type=template&id=0359f532&lang=pug&
+// CONCATENATED MODULE: ./src/components/ThemeChange.vue?vue&type=template&id=32dfcb85&lang=pug&
 
 // EXTERNAL MODULE: /Users/thombruce/Developer/thombruce/tnt/node_modules/theme-change/index.js
 var theme_change = __webpack_require__("61fc");
@@ -6460,7 +6460,14 @@ var _iconsCache = {
 
 
 /* harmony default export */ var ThemeChangevue_type_script_lang_js_ = ({
-  props: ['themes'],
+  props: {
+    themes: {
+      type: Array,
+      default: function _default() {
+        return ['light', 'dark', 'cupcake', 'bumblebee', 'emerald', 'corporate', 'synthwave', 'retro', 'cyberpunk', 'valentine', 'halloween', 'garden', 'forest', 'aqua', 'lofi', 'pastel', 'fantasy', 'wireframe', 'black', 'luxury', 'dracula'];
+      }
+    }
+  },
   computed: {
     faSwatchbook: function faSwatchbook() {
       return index_es_faSwatchbook;
