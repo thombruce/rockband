@@ -1,6 +1,21 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
+  purge: {
+    options: {
+      safelist: [
+        /data-theme$/,
+      ]
+    },
+    content: [
+      'components/**/*.{vue,js}',
+      'layouts/**/*.vue',
+      'plugins/**/*.{js,ts}',
+      'content/**/*.md',
+      'node_modules/@thombruce/**/*.vue',
+      '../node_modules/@thombruce/**/*.vue', // Because this is a nested package.
+    ]
+  },
   daisyui: {
     themes: [
       {
