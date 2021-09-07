@@ -1,6 +1,6 @@
 {
   "name": "tnt-docs",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -16,6 +16,6 @@
     "nuxt": "^2.15.8"
   },
   "devDependencies": {
-    "@thombruce/nuxt-tnt": "^0.1.10"
+    "@thombruce/nuxt-tnt": "^0.1.11"
   }
 }
