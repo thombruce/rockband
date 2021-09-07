@@ -1,4 +1,4 @@
-@import '@thombruce/tnt';
 @import '@thombruce/tnt/dist/tnt.css';
+@import '@thombruce/tnt';
 
 @import "./tnt/nuxt.css";
