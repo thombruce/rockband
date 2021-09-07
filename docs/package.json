@@ -1,5 +1,5 @@
 {
-  "name": "@thombruce/tnt-docs",
+  "name": "tnt-docs",
   "version": "0.1.5",
   "private": true,
   "scripts": {
