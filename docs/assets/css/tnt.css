@@ -1,6 +1,0 @@
-/* Required before @thombruce/tnt if using bundled components. */
-@import '@thombruce/tnt/dist/tnt.css';
-
-@import '@thombruce/tnt';
-
-@import "@thombruce/nuxt-tnt/src/assets/tnt/nuxt.css";
