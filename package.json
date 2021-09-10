@@ -9,14 +9,14 @@
     "docs"
   ],
   "scripts": {
-    "docs:dev": "cd docs && yarn dev",
-    "docs:build": "cd docs && yarn build",
-    "docs:start": "cd docs && yarn start",
-    "docs:generate": "cd docs && yarn generate",
+    "build": "lerna run --scope @thombruce/* build",
+    "docs:dev": "yarn build && cd docs && yarn dev",
+    "docs:build": "yarn build && cd docs && yarn build",
+    "docs:generate": "yarn build && cd docs && yarn generate",
     "release": "yarn release:patch",
-    "release:patch": "lerna run --scope @thombruce/* build && lerna publish --yes --cd-version=patch",
-    "release:minor": "lerna run --scope @thombruce/* build && lerna publish --yes --cd-version=minor",
-    "release:major": "lerna run --scope @thombruce/* build && lerna publish --yes --cd-version=major"
+    "release:patch": "yarn build && lerna publish --yes --cd-version=patch",
+    "release:minor": "yarn build && lerna publish --yes --cd-version=minor",
+    "release:major": "yarn build && lerna publish --yes --cd-version=major"
   },
   "devDependencies": {
     "lerna": "^4.0.0"
