@@ -34,6 +34,10 @@ export default async function () {
             'content/**/*.md',
             'node_modules/@thombruce/**/*.vue',
             '../node_modules/@thombruce/**/*.vue',
+            '../../node_modules/@thombruce/**/*.vue',
+            '../../../node_modules/@thombruce/**/*.vue',
+            '../../../../node_modules/@thombruce/**/*.vue',
+            '../../../../../node_modules/@thombruce/**/*.vue',
           ]
         },
         plugins: [
