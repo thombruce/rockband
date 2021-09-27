@@ -12,7 +12,7 @@ module.exports = {
       'layouts/**/*.vue',
       'plugins/**/*.{js,ts}',
       'content/**/*.md',
-      '../packages/**/*.vue',
+      '../**/*.vue',
     ]
   },
   daisyui: {
