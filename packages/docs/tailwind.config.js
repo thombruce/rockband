@@ -13,6 +13,7 @@ module.exports = {
       'plugins/**/*.{js,ts}',
       'content/**/*.md',
       '../**/*.vue',
+      'node_modules/@thombruce/**/*.md',
     ]
   },
   daisyui: {
