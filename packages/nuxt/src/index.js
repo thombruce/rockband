@@ -28,9 +28,12 @@ export default async function () {
           },
           content: [
             `${join(__dirname, 'components')}/**/*.{vue,js}`,
+            'components/**/*.{vue,js}',
             `${join(__dirname, 'layouts')}/**/*.vue`,
+            'layouts/**/*.vue',
             // `${join(__dirname, 'pages')}/**/*.vue`, // NOTE: This should become usable with Nuxt 3.
             `${join(__dirname, 'plugins')}/**/*.{js,ts}`,
+            'plugins/**/*.{js,ts}',
             'content/**/*.md',
             `${join(__dirname, '..', '..')}/**/*.vue`,
             'node_modules/@thombruce/**/*.vue',
