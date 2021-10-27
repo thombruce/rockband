@@ -1,6 +1,6 @@
 {
   "name": "@thombruce/tnt",
-  "version": "0.1.19",
+  "version": "0.1.29",
   "description": "A Vue.js component library based on TailwindCSS and DaisyUI",
   "repository": "https://github.com/thombruce/tnt",
   "author": "Thom Bruce <thom@thombruce.com>",
