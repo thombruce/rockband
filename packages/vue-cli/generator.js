@@ -67,6 +67,7 @@ function injectTailwindPlugins(api) {
     tailwindConfig.replace(
       'plugins: []',
       "plugins: [\n\
+        require('@tailwindcss/typography'),\n\
         require('@tailwindcss/forms'),\n\
         require('daisyui'),\n\
       ]",

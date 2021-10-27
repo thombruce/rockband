@@ -41,6 +41,7 @@ export default async function () {
           ]
         },
         plugins: [
+          require('@tailwindcss/typography'),
           require('@tailwindcss/forms'),
           require('daisyui'),
         ]

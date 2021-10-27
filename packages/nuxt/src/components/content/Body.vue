@@ -1,5 +1,5 @@
 <template lang='pug'>
-div(:class='article.container')
+.prose(:class='article.container')
   NuxtContent(:document='article')
 </template>
 
