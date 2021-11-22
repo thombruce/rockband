@@ -1,6 +1,6 @@
-/* Required before @thombruce/tnt if using bundled components. */
-/* @import '@thombruce/tnt/dist/tnt.css'; */
+/* Required before @unlabel/vue if using bundled components. */
+/* @import '@unlabel/vue/dist/tnt.css'; */
 
-@import '@thombruce/tnt';
+@import '@unlabel/vue';
 
 @import "./tnt/nuxt.css";

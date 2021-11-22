@@ -1,8 +1,8 @@
-# TNT
+# Unlabel UI
 
 ## Features
 
-TNT is a Nuxt component library that comes with:
+Unlabel UI is a Nuxt component library that comes with:
 
 - [Nuxt Image](https://image.nuxtjs.org/)
 - [Pug](https://pugjs.org/api/getting-started.html)
@@ -16,48 +16,43 @@ TNT is a Nuxt component library that comes with:
 
 These are used to create a base set of components and plugins for my Nuxt projects.
 
-> **What does TNT stand for?**
-> When I conceived of the name, it was just "Thom's Nuxt Template".
-> As the project has evolved, I've moved away from calling it that.
-> It's just TNT to me.
-
 ## Installation
 
 ### Vue CLI
 
-Add TNT to your project and run the initializer:
+Add Unlabel UI to your project and run the initializer:
 
 ```sh
-vue add @thombruce/tnt
+vue add @unlabel/ui
 ```
 
 ### Nuxt
 
-Add TNT to your project:
+Add Unlabel UI to your project:
 
 ```sh
-yarn add --dev @thombruce/nuxt-tnt
+yarn add --dev @unlabel/nuxt
 ```
 
-Add TNT to buildModules in `nuxt.config.js`:
+Add Unlabel UI to buildModules in `nuxt.config.js`:
 
 ```js
 buildModules: [
-  '@thombruce/nuxt-tnt'
+  '@unlabel/nuxt'
 ]
 ```
 
 ## Overwrite Default Styles
 
-Create a CSS file at `assets/css/tnt.css` and import `@thombruce/tnt`:
+Create a CSS file at `assets/css/tnt.css` and import `@unlabel/vue`:
 
 ```css
-@import "@thombruce/tnt";
+@import "@unlabel/vue";
 
 /* Declare your styles or local imports here. */
 ```
 
-TNT comes with Tailwind CSS and PostCSS; you can count on both of them working for this file and its imports. And of course, you can just write plain old CSS.
+Unlabel UI comes with Tailwind CSS and PostCSS; you can count on both of them working for this file and its imports. And of course, you can just write plain old CSS.
 
 You can also configure `tailwind.config.js` following their docs. Apart from the `tnt.css` file, it's just like any other Tailwind installation.
 

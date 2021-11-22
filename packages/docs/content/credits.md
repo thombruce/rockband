@@ -1,7 +1,7 @@
 ---
 title: Credits
 order: 2
-description: 'Packages and media used by TNT.'
+description: 'Packages and media used by Unlabel UI.'
 date: 2021-08-01T17:00:34Z
 container: text-center
 showToC: false

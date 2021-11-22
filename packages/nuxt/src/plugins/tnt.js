@@ -1,4 +1,4 @@
 import Vue from 'vue'
-import TNT from '@thombruce/tnt'
+import TNT from '@unlabel/vue'
 
 Vue.use(TNT, { nuxt: true })
