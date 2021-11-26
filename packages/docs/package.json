@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "version": "0.1.30",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -16,6 +16,6 @@
     "nuxt": "^2.15.8"
   },
   "devDependencies": {
-    "@unlabel/nuxt": "^0.1.30"
+    "@unlabel/nuxt": "^0.2.0"
   }
 }
