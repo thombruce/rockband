@@ -5,6 +5,12 @@ date: 2021-07-31T19:34:09Z
 
 ## Installation
 
+### Vue
+
+```sh
+yarn add --dev @unlabel/vue
+```
+
 ### Vue CLI
 
 Add Unlabel UI to your project and run the initializer:

@@ -75,8 +75,8 @@ function injectTailwindPlugins(api) {
   );
 }
 
-function importTNT(api) {
-  const initTNT = `\nimport TNT from '@unlabel/vue';\n\nimport '@unlabel/vue/dist/tnt.css';\nimport '@unlabel/vue/src/assets/index.css';\n\nVue.use(TNT);`;
+function importUnlabel(api) {
+  const initUnlabel = `\nimport Unlabel from '@unlabel/vue';\n\nimport '@unlabel/vue/dist/tnt.css';\nimport '@unlabel/vue/src/assets/index.css';\n\nVue.use(Unlabel);`;
   // inject to main.js
   const ext = api.hasPlugin('typescript') ? 'ts' : 'js';
   const mainPath = api.resolve(`./src/main.${ext}`);
@@ -85,7 +85,7 @@ function importTNT(api) {
   const lines = contentMain.split(/\r?\n/g).reverse();
   // inject import
   const lastImportIndex = lines.findIndex(line => line.match(/^import/));
-  lines[lastImportIndex] += initTNT;
+  lines[lastImportIndex] += initUnlabel;
   // modify app
   contentMain = lines.reverse().join('\n');
   fs.writeFileSync(api.entryFile, contentMain, { encoding: 'utf-8' });
@@ -110,7 +110,7 @@ module.exports = (api, options) => {
   api.extendPackage(configs);
 
   api.onCreateComplete(() => {
-    importTNT(api);
+    importUnlabel(api);
     generateConfig(api, options.initConfig);
     injectPurgeConfig(api);
     injectTailwindPlugins(api);
