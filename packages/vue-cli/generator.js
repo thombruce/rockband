@@ -53,7 +53,7 @@ function injectPurgeConfig(api) {
             /data-theme$/,\n\
           ]\n\
         },\n\
-        content: ['./public/**/*.html', './src/**/*.vue', './node_modules/@thombruce/**/*.vue']\n\
+        content: ['./public/**/*.html', './src/**/*.vue', './node_modules/@unlabel/**/*.vue']\n\
       }",
     ),
   );
@@ -76,7 +76,7 @@ function injectTailwindPlugins(api) {
 }
 
 function importTNT(api) {
-  const initTNT = `\nimport TNT from '@thombruce/tnt';\n\nimport '@thombruce/tnt/dist/tnt.css';\nimport '@thombruce/tnt/src/assets/index.css';\n\nVue.use(TNT);`;
+  const initTNT = `\nimport TNT from '@unlabel/vue';\n\nimport '@unlabel/vue/dist/tnt.css';\nimport '@unlabel/vue/src/assets/index.css';\n\nVue.use(TNT);`;
   // inject to main.js
   const ext = api.hasPlugin('typescript') ? 'ts' : 'js';
   const mainPath = api.resolve(`./src/main.${ext}`);
@@ -95,7 +95,7 @@ module.exports = (api, options) => {
   const postcss = readPostcssConfig(api);
   const configs = {
     dependencies: {
-      '@thombruce/tnt': '^0.1.5'
+      '@unlabel/vue': '^0.2.0'
     },
     postcss: {
       plugins: {
