@@ -15,6 +15,6 @@ export default {
 
 <style lang='postcss' scoped>
 span {
-  @apply block w-min m-auto text-4xl sm:text-6xl md:text-7xl text-base-content;
+  @apply block w-min m-auto text-4xl sm:text-6xl md:text-7xl;
 }
 </style>

@@ -1,5 +1,5 @@
 article a {
-  @apply link link-primary link-hover;
+  /* @apply link link-primary link-hover; */
 }
 
 article header {
@@ -7,7 +7,7 @@ article header {
     @apply font-bold;
   }
   & time {
-    @apply text-info;
+    /* @apply text-info; */
   }
 }
 

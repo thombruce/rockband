@@ -6,6 +6,6 @@ footer
 
 <style lang='postcss' scoped>
 footer {
-  @apply mt-5 py-5 bg-neutral text-neutral-content;
+  @apply mt-5 py-5;
 }
 </style>

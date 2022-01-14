@@ -21,7 +21,7 @@ export default {
 .copyright {
   @apply pt-4 text-center text-sm;
   & a {
-    @apply link;
+    /* @apply link; */
   }
 }
 </style>
