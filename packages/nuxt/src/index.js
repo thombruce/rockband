@@ -21,11 +21,6 @@ export default async function () {
       mode: 'jit',
       config: {
         purge: {
-          options: {
-            safelist: [
-              /data-theme$/,
-            ]
-          },
           content: [
             `${join(__dirname, 'components')}/**/*.{vue,js}`,
             'components/**/*.{vue,js}',
@@ -43,7 +38,6 @@ export default async function () {
         plugins: [
           require('@tailwindcss/typography'),
           require('@tailwindcss/forms'),
-          require('daisyui'),
         ]
       }
     },

@@ -19,8 +19,6 @@ showToC: false
 <a href='https://nuxtjs.org/' class='text-2xl'><tnt-simple-icon icon='nuxtdotjs'></tnt-simple-icon> Nuxt.js</a>
 <br class='inline md:hidden'/><span class='hidden md:inline'>&emsp;</span>
 <a href='https://tailwindcss.com/' class='text-2xl'><tnt-simple-icon icon='tailwindcss'></tnt-simple-icon> Tailwind CSS</a>
-<br class='inline md:hidden'/><span class='hidden md:inline'>&emsp;</span>
-<a href='https://daisyui.com/' class='text-2xl'>DaisyUI</a>
 
 <br/>
 <br/>

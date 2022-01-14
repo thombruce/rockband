@@ -48,11 +48,6 @@ function injectPurgeConfig(api) {
     tailwindConfig.replace(
       'purge: []',
       "purge: {\n\
-        options: {\n\
-          safelist: [\n\
-            /data-theme$/,\n\
-          ]\n\
-        },\n\
         content: ['./public/**/*.html', './src/**/*.vue', './node_modules/@unlabel/**/*.vue']\n\
       }",
     ),
@@ -69,7 +64,6 @@ function injectTailwindPlugins(api) {
       "plugins: [\n\
         require('@tailwindcss/typography'),\n\
         require('@tailwindcss/forms'),\n\
-        require('daisyui'),\n\
       ]",
     ),
   );

@@ -8,16 +8,11 @@
 </template>
 
 <script>
-import { themeChange } from 'theme-change'
-
 export default {
   data () {
     return {
       showMainMenu: false
     }
-  },
-  mounted () {
-    themeChange(false)
   }
 }
 </script>

@@ -6,7 +6,6 @@
         span {{ dir.split('/').pop() | titleize }}
       NuxtLink.btn.btn-ghost(v-else v-for='(page) in collection' :key='page.slug' :to='page')
         span {{ page.title }}
-  TntUIThemeToggle
 </template>
 
 <script>

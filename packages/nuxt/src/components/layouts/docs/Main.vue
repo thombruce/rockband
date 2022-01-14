@@ -5,9 +5,6 @@
       .flex-none
         label.btn.btn-square.btn-ghost.drawer-button(for='main-menu' class='lg:hidden')
           fa(:icon='faBars')
-      .flex-1
-      .navbar-end
-        TntUIThemeToggle
 
   main.max-w-prose.mx-auto
     TntUIBreadcrumbs
