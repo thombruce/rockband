@@ -24,14 +24,14 @@ header
           NuxtLink(:to='`/authors/${parameterize(author)}`' rel='author') {{ author }}
         template(v-else) {{ author }}
 
+  time.block.text-sm.text-gray-500(v-if='article.date' pubdate :datetime='article.date') {{ article.date | toLocaleString }}
+
   dl.inline-block.mr-1(v-if='tags.length')
     dt.sr-only Tags
     dd.inline-block.mr-2(v-for='tag in tags')
       template(v-if='$router.match(`/tags/${parameterize(tag)}`).matched.length')
         NuxtLink(:to='`/tags/${parameterize(tag)}`') {{ tag }}
       template(v-else) {{ tag }}
-
-  time.block(v-if='article.date' pubdate :datetime='article.date') {{ article.date | toLocaleString }}
 
   NuxtImg(v-if='article.image' :src='article.image' sizes='xs:320px sm:640px md:768px')
 </template>

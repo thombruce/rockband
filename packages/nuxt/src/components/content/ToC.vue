@@ -11,3 +11,9 @@ export default {
   ]
 }
 </script>
+
+<style lang='postcss' scoped>
+aside {
+  @apply py-5;
+}
+</style>
