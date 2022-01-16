@@ -1,11 +1,10 @@
 <template lang='pug'>
-.navbar
-  nav
-    template(v-for='(collection, dir) in collections')
-      NuxtLink.btn.btn-ghost(v-if="dir != '/'" :key='dir' :to='dir')
-        span {{ dir.split('/').pop() | titleize }}
-      NuxtLink.btn.btn-ghost(v-else v-for='(page) in collection' :key='page.slug' :to='page')
-        span {{ page.title }}
+nav
+  template(v-for='(collection, dir) in collections')
+    NuxtLink(v-if="dir != '/'" :key='dir' :to='dir')
+      | {{ dir.split('/').pop() | titleize }}
+    NuxtLink(v-else v-for='(page) in collection' :key='page.slug' :to='page')
+      | {{ page.title }}
 </template>
 
 <script>
@@ -32,7 +31,11 @@ export default {
 </script>
 
 <style lang='postcss' scoped>
-.navbar {
+nav {
   @apply flex justify-center;
+
+  & a+a {
+    @apply ml-4;
+  }
 }
 </style>

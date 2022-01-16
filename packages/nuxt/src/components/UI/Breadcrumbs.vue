@@ -42,3 +42,17 @@ export default {
   }
 }
 </script>
+
+<style lang='postcss' scoped>
+.breadcrumbs {
+  @apply bg-gray-100 px-5 py-3 rounded-md w-full;
+  & ul {
+    @apply list-none flex;
+
+    & li+li:before {
+      @apply mx-2 text-gray-500;
+      content: '/';
+    }
+  }
+}
+</style>
