@@ -7,8 +7,6 @@ article
 
 <script>
 export default {
-  layout: 'docs',
-
   async asyncData ({ $content }) {
     const pages = await $content()
       .fetch()

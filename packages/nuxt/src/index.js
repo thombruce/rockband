@@ -88,13 +88,6 @@ export default async function () {
       src: join(__dirname, "layouts/error.vue")
     })
   }
-
-  if (!fs.existsSync("layouts/docs.vue")) { // If exists, overwrites...
-    this.addLayout({
-      name: 'docs',
-      src: join(__dirname, "layouts/docs.vue")
-    })
-  }
 }
 
 // Used in conjunction with addModule(opts, requireOnce)

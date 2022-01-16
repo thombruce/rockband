@@ -9,8 +9,6 @@ div
 
 <script>
 export default {
-  layout: 'docs',
-
   async asyncData ({ $content, $taxonomies, params }) {
     const slug = params.page
 
