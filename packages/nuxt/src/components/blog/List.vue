@@ -7,11 +7,20 @@ div
 
       header
         h2
-          NuxtLink(:to='article') {{ article.title }}
-        time(v-if='article.date' :datetime='article.date') {{ article.date | toLocaleString }}
+          a(v-if='article.link' :href='article.link' target='_blank') {{ article.title }}
+          NuxtLink(v-else :to='article') {{ article.title }}
+        time.block.text-sm.text-gray-500(v-if='article.date' pubdate :datetime='article.date') {{ article.date | toLocaleString }}
 
-      div(v-if='article.description')
-        p {{ article.description }}
+      .prose(v-if='article.description && !article.excerpt')
+        | {{ article.description }}
+      NuxtContent.prose(
+        v-else-if='article.excerpt'
+        :document='{ body: article.excerpt }'
+      )
+      NuxtContent.prose(
+        v-else
+        :document='article'
+      )
 
   div.text-center(v-else)
     span.text-2xl.text-gray-500 There's nothing to see yet.

@@ -1,6 +1,5 @@
 <template lang='pug'>
-.prose(:class='article.container')
-  NuxtContent(:document='article')
+NuxtContent.prose(:document='article')
 </template>
 
 <script>
