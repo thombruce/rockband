@@ -20,6 +20,7 @@ export default async function () {
       cssPath: fs.existsSync("assets/css/tnt.css") ? "~/assets/css/tnt.css" : join(__dirname, "assets/tnt.css"),
       mode: 'jit',
       config: {
+        darkMode: 'class',
         purge: {
           content: [
             `${join(__dirname, 'components')}/**/*.{vue,js}`,
