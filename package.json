@@ -1,5 +1,5 @@
 {
-  "name": "@unlabel/ui",
+  "name": "rockband",
   "version": "0.0.0",
   "author": "Thom Bruce <thom@thombruce.com>",
   "license": "MIT",
@@ -8,7 +8,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "lerna run --scope @unlabel/* build",
+    "build": "lerna run --scope @rockband/* build",
     "docs:dev": "yarn build && cd docs && yarn dev",
     "docs:build": "yarn build && cd docs && yarn build",
     "docs:generate": "yarn build && cd docs && yarn generate",

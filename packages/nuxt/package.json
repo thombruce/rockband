@@ -1,5 +1,5 @@
 {
-  "name": "@unlabel/nuxt",
+  "name": "@rockband/nuxt",
   "version": "0.3.5",
   "description": "My personal component library for Nuxt.js",
   "main": "src/index.js",
@@ -15,7 +15,7 @@
     "@nuxtjs/color-mode": "^2.1.1",
     "@nuxtjs/tailwindcss": "^4.1.3",
     "@thombruce/nuxt-taxonomies": "^0.2.0",
-    "@unlabel/vue": "^0.3.0",
+    "@rockband/vue": "^0.3.0",
     "pug-plain-loader": "^1.1.0",
     "simple-icons": "^5.10.0"
   },

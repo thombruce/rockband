@@ -48,7 +48,7 @@ function injectPurgeConfig(api) {
     tailwindConfig.replace(
       'purge: []',
       "purge: {\n\
-        content: ['./public/**/*.html', './src/**/*.vue', './node_modules/@unlabel/**/*.vue']\n\
+        content: ['./public/**/*.html', './src/**/*.vue', './node_modules/@rockband/**/*.vue']\n\
       }",
     ),
   );
@@ -69,8 +69,8 @@ function injectTailwindPlugins(api) {
   );
 }
 
-function importUnlabel(api) {
-  const initUnlabel = `\nimport Unlabel from '@unlabel/vue';\n\nimport '@unlabel/vue/dist/tnt.css';\nimport '@unlabel/vue/src/assets/index.css';\n\nVue.use(Unlabel);`;
+function importRockBand(api) {
+  const initRockBand = `\nimport RockBand from '@rockband/vue';\n\nimport '@rockband/vue/dist/tnt.css';\nimport '@rockband/vue/src/assets/index.css';\n\nVue.use(RockBand);`;
   // inject to main.js
   const ext = api.hasPlugin('typescript') ? 'ts' : 'js';
   const mainPath = api.resolve(`./src/main.${ext}`);
@@ -79,7 +79,7 @@ function importUnlabel(api) {
   const lines = contentMain.split(/\r?\n/g).reverse();
   // inject import
   const lastImportIndex = lines.findIndex(line => line.match(/^import/));
-  lines[lastImportIndex] += initUnlabel;
+  lines[lastImportIndex] += initRockBand;
   // modify app
   contentMain = lines.reverse().join('\n');
   fs.writeFileSync(api.entryFile, contentMain, { encoding: 'utf-8' });
@@ -89,7 +89,7 @@ module.exports = (api, options) => {
   const postcss = readPostcssConfig(api);
   const configs = {
     dependencies: {
-      '@unlabel/vue': '^0.2.0'
+      '@rockband/vue': '^0.2.0'
     },
     postcss: {
       plugins: {
@@ -104,7 +104,7 @@ module.exports = (api, options) => {
   api.extendPackage(configs);
 
   api.onCreateComplete(() => {
-    importUnlabel(api);
+    importRockBand(api);
     generateConfig(api, options.initConfig);
     injectPurgeConfig(api);
     injectTailwindPlugins(api);

@@ -1,6 +1,6 @@
-/* Required before @unlabel/vue if using bundled components. */
-/* @import '@unlabel/vue/dist/tnt.css'; */
+/* Required before @rockband/vue if using bundled components. */
+/* @import '@rockband/vue/dist/tnt.css'; */
 
-@import '@unlabel/vue';
+@import '@rockband/vue';
 
 @import "./tnt/nuxt.css";

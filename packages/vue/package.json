@@ -1,5 +1,5 @@
 {
-  "name": "@unlabel/vue",
+  "name": "@rockband/vue",
   "version": "0.3.0",
   "description": "A Vue.js component library based on TailwindCSS",
   "repository": "https://github.com/thombruce/tnt",

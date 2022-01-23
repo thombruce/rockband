@@ -34,7 +34,7 @@ export default async function () {
             'content/**/*.md',
             `${join(__dirname, '..', '..')}/**/*.vue`,
             '../**/*.vue',
-            'node_modules/@unlabel/**/*.vue',
+            'node_modules/@rockband/**/*.vue',
           ]
         },
         plugins: [
