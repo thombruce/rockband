@@ -25,23 +25,23 @@ These are used to create a base set of components and plugins for my Nuxt projec
 Add TNT to your project:
 
 ```sh
-yarn add --dev @unlabel/nuxt
+yarn add --dev @rockband/nuxt
 ```
 
 Add TNT to buildModules in `nuxt.config.js`:
 
 ```js
 buildModules: [
-  '@unlabel/nuxt'
+  '@rockband/nuxt'
 ]
 ```
 
 ## Overwrite Default Styles
 
-Create a CSS file at `assets/css/tnt.css` and import `@unlabel/vue`:
+Create a CSS file at `assets/css/tnt.css` and import `@rockband/vue`:
 
 ```css
-@import "@unlabel/vue";
+@import "@rockband/vue";
 
 /* Declare your styles or local imports here. */
 ```
