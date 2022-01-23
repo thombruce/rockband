@@ -288,7 +288,7 @@ module.exports = function (METHOD_NAME) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: /Users/thombruce/Developer/unlabel/ui/node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
+// CONCATENATED MODULE: /Users/thombruce/Developer/thombruce/rockband/node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 // This file is imported into lib/wc client bundles.
 
 if (typeof window !== 'undefined') {
@@ -312,25 +312,25 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// EXTERNAL MODULE: /Users/thombruce/Developer/unlabel/ui/node_modules/core-js/modules/es.object.keys.js
+// EXTERNAL MODULE: /Users/thombruce/Developer/thombruce/rockband/node_modules/core-js/modules/es.object.keys.js
 var es_object_keys = __webpack_require__("f8a5");
 
-// EXTERNAL MODULE: /Users/thombruce/Developer/unlabel/ui/node_modules/core-js/modules/es.symbol.js
+// EXTERNAL MODULE: /Users/thombruce/Developer/thombruce/rockband/node_modules/core-js/modules/es.symbol.js
 var es_symbol = __webpack_require__("d6de");
 
-// EXTERNAL MODULE: /Users/thombruce/Developer/unlabel/ui/node_modules/core-js/modules/es.array.filter.js
+// EXTERNAL MODULE: /Users/thombruce/Developer/thombruce/rockband/node_modules/core-js/modules/es.array.filter.js
 var es_array_filter = __webpack_require__("2d6d");
 
-// EXTERNAL MODULE: /Users/thombruce/Developer/unlabel/ui/node_modules/core-js/modules/es.object.get-own-property-descriptor.js
+// EXTERNAL MODULE: /Users/thombruce/Developer/thombruce/rockband/node_modules/core-js/modules/es.object.get-own-property-descriptor.js
 var es_object_get_own_property_descriptor = __webpack_require__("75a4");
 
-// EXTERNAL MODULE: /Users/thombruce/Developer/unlabel/ui/node_modules/core-js/modules/web.dom-collections.for-each.js
+// EXTERNAL MODULE: /Users/thombruce/Developer/thombruce/rockband/node_modules/core-js/modules/web.dom-collections.for-each.js
 var web_dom_collections_for_each = __webpack_require__("fa8c");
 
-// EXTERNAL MODULE: /Users/thombruce/Developer/unlabel/ui/node_modules/core-js/modules/es.object.get-own-property-descriptors.js
+// EXTERNAL MODULE: /Users/thombruce/Developer/thombruce/rockband/node_modules/core-js/modules/es.object.get-own-property-descriptors.js
 var es_object_get_own_property_descriptors = __webpack_require__("16d1");
 
-// CONCATENATED MODULE: /Users/thombruce/Developer/unlabel/ui/node_modules/@babel/runtime/helpers/esm/defineProperty.js
+// CONCATENATED MODULE: /Users/thombruce/Developer/thombruce/rockband/node_modules/@babel/runtime/helpers/esm/defineProperty.js
 function _defineProperty(obj, key, value) {
   if (key in obj) {
     Object.defineProperty(obj, key, {
@@ -345,7 +345,7 @@ function _defineProperty(obj, key, value) {
 
   return obj;
 }
-// CONCATENATED MODULE: /Users/thombruce/Developer/unlabel/ui/node_modules/@babel/runtime/helpers/esm/objectSpread2.js
+// CONCATENATED MODULE: /Users/thombruce/Developer/thombruce/rockband/node_modules/@babel/runtime/helpers/esm/objectSpread2.js
 
 
 
@@ -391,13 +391,13 @@ function _objectSpread2(target) {
 
   return target;
 }
-// EXTERNAL MODULE: /Users/thombruce/Developer/unlabel/ui/node_modules/vue-meta/dist/vue-meta.esm.js
+// EXTERNAL MODULE: /Users/thombruce/Developer/thombruce/rockband/node_modules/vue-meta/dist/vue-meta.esm.js
 var vue_meta_esm = __webpack_require__("fb1b");
 
 // EXTERNAL MODULE: ./src/assets/index.css
 var assets = __webpack_require__("d940");
 
-// EXTERNAL MODULE: /Users/thombruce/Developer/unlabel/ui/node_modules/@fortawesome/vue-fontawesome/index.es.js
+// EXTERNAL MODULE: /Users/thombruce/Developer/thombruce/rockband/node_modules/@fortawesome/vue-fontawesome/index.es.js
 var index_es = __webpack_require__("dc04");
 
 // CONCATENATED MODULE: ./src/index.js
@@ -418,7 +418,7 @@ var index_es = __webpack_require__("dc04");
     Vue.component(options.iconComponent, index_es["a" /* FontAwesomeIcon */]);
   }
 });
-// CONCATENATED MODULE: /Users/thombruce/Developer/unlabel/ui/node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
+// CONCATENATED MODULE: /Users/thombruce/Developer/thombruce/rockband/node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 
 /* harmony default export */ var entry_lib = __webpack_exports__["default"] = (src_0);
