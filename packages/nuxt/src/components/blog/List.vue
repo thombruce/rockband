@@ -11,15 +11,17 @@ div
           NuxtLink(v-else :to='article') {{ article.title }}
         time.block.text-sm.text-gray-500(v-if='article.date' pubdate :datetime='article.date') {{ article.date | toLocaleString }}
 
-      .prose(v-if='article.description && !article.excerpt')
+      div(v-if='article.description && !article.excerpt' class='prose dark:prose-invert')
         | {{ article.description }}
-      NuxtContent.prose(
+      NuxtContent(
         v-else-if='article.excerpt'
         :document='{ body: article.excerpt }'
+        class='prose dark:prose-invert'
       )
-      NuxtContent.prose(
+      NuxtContent(
         v-else
         :document='article'
+        class='prose dark:prose-invert'
       )
 
   div.text-center(v-else)

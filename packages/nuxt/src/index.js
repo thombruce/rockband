@@ -2,7 +2,7 @@ import { join, resolve } from 'path'
 
 import fs from 'fs'
 
-// const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors')
 
 export default async function () {
   const { nuxt } = this
@@ -40,7 +40,57 @@ export default async function () {
         plugins: [
           require('@tailwindcss/typography'),
           require('@tailwindcss/forms'),
-        ]
+        ],
+        // TODO: Stolen from a future version of Tailwind Typography - won't be needed after 3.0 upgrade
+        theme: {
+          typography: {
+            // Invert (for dark mode)
+            invert: {
+              css: {
+                '--tw-prose-body': 'var(--tw-prose-invert-body)',
+                '--tw-prose-headings': 'var(--tw-prose-invert-headings)',
+                '--tw-prose-lead': 'var(--tw-prose-invert-lead)',
+                '--tw-prose-links': 'var(--tw-prose-invert-links)',
+                '--tw-prose-bold': 'var(--tw-prose-invert-bold)',
+                '--tw-prose-counters': 'var(--tw-prose-invert-counters)',
+                '--tw-prose-bullets': 'var(--tw-prose-invert-bullets)',
+                '--tw-prose-hr': 'var(--tw-prose-invert-hr)',
+                '--tw-prose-quotes': 'var(--tw-prose-invert-quotes)',
+                '--tw-prose-quote-borders': 'var(--tw-prose-invert-quote-borders)',
+                '--tw-prose-captions': 'var(--tw-prose-invert-captions)',
+                '--tw-prose-code': 'var(--tw-prose-invert-code)',
+                '--tw-prose-pre-code': 'var(--tw-prose-invert-pre-code)',
+                '--tw-prose-pre-bg': 'var(--tw-prose-invert-pre-bg)',
+                '--tw-prose-th-borders': 'var(--tw-prose-invert-th-borders)',
+                '--tw-prose-td-borders': 'var(--tw-prose-invert-td-borders)',
+              },
+            },
+
+            // Gray color themes
+
+            gray: {
+              css: {
+                '--tw-prose-invert-body': colors.gray[300],
+                '--tw-prose-invert-headings': colors.white,
+                '--tw-prose-invert-lead': colors.gray[400],
+                '--tw-prose-invert-links': colors.white,
+                '--tw-prose-invert-bold': colors.white,
+                '--tw-prose-invert-counters': colors.gray[400],
+                '--tw-prose-invert-bullets': colors.gray[600],
+                '--tw-prose-invert-hr': colors.gray[700],
+                '--tw-prose-invert-quotes': colors.gray[100],
+                '--tw-prose-invert-quote-borders': colors.gray[700],
+                '--tw-prose-invert-captions': colors.gray[400],
+                '--tw-prose-invert-code': colors.white,
+                '--tw-prose-invert-pre-code': colors.gray[300],
+                '--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
+                '--tw-prose-invert-th-borders': colors.gray[600],
+                '--tw-prose-invert-td-borders': colors.gray[700],
+              },
+            },
+          }
+        }
+        // END
       }
     },
     ...nuxt.options.tailwindcss

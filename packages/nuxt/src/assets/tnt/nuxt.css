@@ -1,3 +1,11 @@
+body {
+  /* Dark mode resets */
+  @apply dark:bg-gray-900 dark:text-white dark:border-white;
+  & select {
+    @apply dark:bg-gray-900;
+  }
+}
+
 article a {
   /* @apply link link-primary link-hover; */
 }

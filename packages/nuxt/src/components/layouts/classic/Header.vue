@@ -2,6 +2,8 @@
 header
   TntLayoutsClassicHeaderTitle
   TntLayoutsClassicHeaderMenu
+  .mx-auto
+    TntUIThemeToggle
 </template>
 
 <style lang='postcss' scoped>

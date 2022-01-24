@@ -1,5 +1,5 @@
 <template lang='pug'>
-NuxtContent.prose(:document='article')
+NuxtContent(:document='article' class='prose dark:prose-invert')
 </template>
 
 <script>
