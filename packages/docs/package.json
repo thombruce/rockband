@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -11,7 +11,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/pwa": "^3.3.5",
-    "@rockband/nuxt": "^0.4.1",
+    "@rockband/nuxt": "^0.5.0",
     "core-js": "^3.16.2",
     "nuxt": "^2.15.8"
   }
