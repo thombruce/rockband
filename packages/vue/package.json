@@ -1,6 +1,6 @@
 {
   "name": "@rockband/vue",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "A Vue.js component library based on TailwindCSS",
   "repository": "https://github.com/thombruce/tnt",
   "author": "Thom Bruce <thom@thombruce.com>",

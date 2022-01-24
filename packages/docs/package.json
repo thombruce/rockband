@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -17,6 +17,6 @@
     "nuxt": "^2.15.8"
   },
   "devDependencies": {
-    "@rockband/nuxt": "^0.4.0"
+    "@rockband/nuxt": "^0.4.1"
   }
 }
