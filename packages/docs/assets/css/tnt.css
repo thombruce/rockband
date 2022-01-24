@@ -1,0 +1,7 @@
+@import '@rockband/nuxt';
+
+/* Declare your styles or local imports here. */
+
+@import 'highlight.js/styles/github-dark.css';
+
+/* Next question: How to... use a different theme in Dark mode? */

@@ -1,3 +1,5 @@
+import highlightjs from 'highlight.js'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -56,7 +58,18 @@ export default {
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  content: {
+    markdown: {
+      highlighter(rawCode, lang) {
+        const highlightedCode = highlightjs.highlight(rawCode, { language: lang }).value
+
+        // We need to create a wrapper, because
+        // the returned code from highlight.js
+        // is only the highlighted code.
+        return `<pre><code class="hljs ${lang}">${highlightedCode}</code></pre>`
+      }
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
