@@ -9,9 +9,9 @@
   ],
   "scripts": {
     "build": "lerna run --scope @rockband/* build",
-    "docs:dev": "yarn build && cd docs && yarn dev",
-    "docs:build": "yarn build && cd docs && yarn build",
-    "docs:generate": "yarn build && cd docs && yarn generate",
+    "docs:dev": "yarn build && cd packages/docs && yarn dev",
+    "docs:build": "yarn build && cd packages/docs && yarn build",
+    "docs:generate": "yarn build && cd packages/docs && yarn generate",
     "release": "yarn release:patch",
     "release:patch": "yarn build && lerna publish --yes --cd-version=patch",
     "release:minor": "yarn build && lerna publish --yes --cd-version=minor",
