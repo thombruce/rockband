@@ -18,7 +18,7 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/tailwindcss": "^4.1.3",
     "@rockband/vue": "^0.5.0",
-    "@thombruce/nuxt-taxonomies": "^0.2.0",
+    "@thombruce/nuxt-taxonomies": "^0.3.0",
     "highlight.js": "^11.4.0",
     "pug-plain-loader": "^1.1.0",
     "simple-icons": "^5.10.0"
