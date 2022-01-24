@@ -26,6 +26,10 @@ export default async function () {
       }
     }
   }])
+  // https://go.nuxtjs.dev/axios
+  await this.addModule(['@nuxtjs/axios', {}])
+  // https://go.nuxtjs.dev/pwa
+  await this.addModule(['@nuxtjs/pwa', { manifest: { lang: 'en' } }])
   await this.addModule(['@nuxtjs/color-mode', { classSuffix: '' }])
   await this.addModule('@thombruce/nuxt-taxonomies')
   await this.addModule('@nuxt/image')

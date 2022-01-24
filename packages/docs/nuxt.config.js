@@ -36,10 +36,6 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
     // https://thombruce.github.io/rockband
     '@rockband/nuxt',
   ],
@@ -48,11 +44,7 @@ export default {
   axios: {},
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
-  pwa: {
-    manifest: {
-      lang: 'en'
-    }
-  },
+  pwa: {},
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
