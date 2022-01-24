@@ -2,6 +2,8 @@ import { join, resolve } from 'path'
 
 import fs from 'fs'
 
+import highlightjs from 'highlight.js'
+
 const colors = require('tailwindcss/colors')
 
 export default async function () {
@@ -12,6 +14,18 @@ export default async function () {
     throw new Error('please set `components: true` inside `nuxt.config` and ensure using `nuxt >= 2.13.0`')
   }
 
+  await this.addModule(['@nuxt/content', {
+    markdown: {
+      highlighter(rawCode, lang) {
+        const highlightedCode = highlightjs.highlight(rawCode, { language: lang }).value
+
+        // We need to create a wrapper, because
+        // the returned code from highlight.js
+        // is only the highlighted code.
+        return `<pre><code class="hljs ${lang}">${highlightedCode}</code></pre>`
+      }
+    }
+  }])
   await this.addModule(['@nuxtjs/color-mode', { classSuffix: '' }])
   await this.addModule('@thombruce/nuxt-taxonomies')
   await this.addModule('@nuxt/image')

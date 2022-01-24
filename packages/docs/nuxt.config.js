@@ -1,5 +1,3 @@
-import highlightjs from 'highlight.js'
-
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -34,7 +32,6 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@rockband/nuxt'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -43,8 +40,8 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content',
+    // https://thombruce.github.io/rockband
+    '@rockband/nuxt',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -58,18 +55,7 @@ export default {
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {
-    markdown: {
-      highlighter(rawCode, lang) {
-        const highlightedCode = highlightjs.highlight(rawCode, { language: lang }).value
-
-        // We need to create a wrapper, because
-        // the returned code from highlight.js
-        // is only the highlighted code.
-        return `<pre><code class="hljs ${lang}">${highlightedCode}</code></pre>`
-      }
-    }
-  },
+  content: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
