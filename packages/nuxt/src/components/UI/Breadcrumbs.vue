@@ -45,7 +45,7 @@ export default {
 
 <style lang='postcss' scoped>
 .breadcrumbs {
-  @apply bg-gray-100 px-5 py-3 rounded-md w-full;
+  @apply bg-gray-100 dark:bg-gray-800 px-5 py-3 rounded-md w-full;
   & ul {
     @apply list-none flex;
 
