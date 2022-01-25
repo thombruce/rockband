@@ -70,7 +70,7 @@ function injectTailwindPlugins(api) {
 }
 
 function importRockBand(api) {
-  const initRockBand = `\nimport RockBand from '@rockband/vue';\n\nimport '@rockband/vue/dist/tnt.css';\nimport '@rockband/vue/src/assets/index.css';\n\nVue.use(RockBand);`;
+  const initRockBand = `\nimport RockBand from '@rockband/vue';\n\nimport '@rockband/vue/dist/rockband.css';\nimport '@rockband/vue/src/assets/index.css';\n\nVue.use(RockBand);`;
   // inject to main.js
   const ext = api.hasPlugin('typescript') ? 'ts' : 'js';
   const mainPath = api.resolve(`./src/main.${ext}`);

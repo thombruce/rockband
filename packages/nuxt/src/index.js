@@ -36,7 +36,7 @@ export default async function () {
 
   nuxt.options.tailwindcss = {
     ...{
-      cssPath: fs.existsSync("assets/css/tnt.css") ? "~/assets/css/tnt.css" : join(__dirname, "assets/tnt.css"),
+      cssPath: fs.existsSync("assets/css/rockband.css") ? "~/assets/css/rockband.css" : join(__dirname, "assets/rockband.css"),
       mode: 'jit',
       config: {
         darkMode: 'class',
@@ -116,7 +116,7 @@ export default async function () {
   await this.addModule('@nuxtjs/tailwindcss')
 
   this.addPlugin({
-    src: resolve(__dirname, 'plugins/tnt.js')
+    src: resolve(__dirname, 'plugins/rockband.js')
   })
 
   this.addPlugin({

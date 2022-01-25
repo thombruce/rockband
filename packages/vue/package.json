@@ -2,16 +2,16 @@
   "name": "@rockband/vue",
   "version": "0.5.0",
   "description": "A Vue.js component library based on TailwindCSS",
-  "repository": "https://github.com/thombruce/tnt",
+  "repository": "https://github.com/thombruce/rockband",
   "author": "Thom Bruce <thom@thombruce.com>",
   "license": "MIT",
-  "main": "dist/tnt.common.js",
+  "main": "dist/rockband.common.js",
   "style": "src/assets/index.css",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "build": "vue-cli-service build --target lib --name tnt ./src/index.js",
+    "build": "vue-cli-service build --target lib --name rockband ./src/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
