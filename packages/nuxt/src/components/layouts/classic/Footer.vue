@@ -1,7 +1,7 @@
 <template lang='pug'>
 footer
-  TntLayoutsClassicFooterSocial
-  TntLayoutsClassicFooterCopyright
+  RockBandLayoutsClassicFooterSocial
+  RockBandLayoutsClassicFooterCopyright
 </template>
 
 <style lang='postcss' scoped>

@@ -1,9 +1,9 @@
 <template lang='pug'>
 header
-  TntLayoutsClassicHeaderTitle
-  TntLayoutsClassicHeaderMenu
+  RockBandLayoutsClassicHeaderTitle
+  RockBandLayoutsClassicHeaderMenu
   .mx-auto
-    TntUIThemeToggle
+    RockBandUIThemeToggle
 </template>
 
 <style lang='postcss' scoped>

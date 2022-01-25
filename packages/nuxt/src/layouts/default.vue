@@ -1,11 +1,11 @@
 <template lang='pug'>
 #appContainer
-  TntLayoutsClassicHeader
+  RockBandLayoutsClassicHeader
 
   main.container.mx-auto.px-5
     .max-w-prose.mx-auto
-      TntUIBreadcrumbs
+      RockBandUIBreadcrumbs
       Nuxt
 
-  TntLayoutsClassicFooter
+  RockBandLayoutsClassicFooter
 </template>

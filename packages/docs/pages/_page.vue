@@ -1,10 +1,10 @@
 <template lang='pug'>
 div
-  TntContent(v-if='!Array.isArray(page)' :article='page')
+  RockBandContent(v-if='!Array.isArray(page)' :article='page')
   article(v-else)
     header
       h1 {{ slug | titleize }}
-    TntBlogList(:articles='page')
+    RockBandBlogList(:articles='page')
 </template>
 
 <script>

@@ -1,7 +1,7 @@
 <template lang='pug'>
 aside
   h2 Table of Contents
-  TntUITableOfContents(:toc='article.toc')
+  RockBandUITableOfContents(:toc='article.toc')
 </template>
 
 <script>

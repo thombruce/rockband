@@ -139,7 +139,7 @@ export default async function () {
     // Add ./components dir to the list
     dirs.push({
       path: join(__dirname, "components"),
-      prefix: "tnt",
+      prefix: "RockBand",
       level: 1
     })
   })
