@@ -1,6 +1,6 @@
 {
   "name": "@rockband/nuxt",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "description": "My personal component library for Nuxt.js",
   "main": "src/index.js",
   "style": "src/assets/rockband.css",
@@ -17,7 +17,7 @@
     "@nuxtjs/color-mode": "^2.1.1",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/tailwindcss": "^4.1.3",
-    "@rockband/vue": "^0.5.0",
+    "@rockband/vue": "^0.6.0",
     "@thombruce/nuxt-taxonomies": "^0.3.0",
     "highlight.js": "^11.4.0",
     "pug-plain-loader": "^1.1.0",
