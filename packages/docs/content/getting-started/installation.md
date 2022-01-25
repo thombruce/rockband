@@ -41,7 +41,7 @@ RockBand comes with a default layout, but you'll still need to create your own p
 
 ## Overwrite Default Styles
 
-Create a CSS file at `assets/css/tnt.css` and import `@rockband/vue`:
+Create a CSS file at `assets/css/rockband.css` and import `@rockband/vue`:
 
 ```css
 @import "@rockband/vue";
@@ -51,4 +51,4 @@ Create a CSS file at `assets/css/tnt.css` and import `@rockband/vue`:
 
 RockBand comes with Tailwind CSS and PostCSS; you can count on both of them working for this file and its imports. And of course, you can just write plain old CSS.
 
-You can also configure `tailwind.config.js` following their docs. Apart from the `tnt.css` file, it's just like any other Tailwind installation.
+You can also configure `tailwind.config.js` following their docs. Apart from the `rockband.css` file, it's just like any other Tailwind installation.

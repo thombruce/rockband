@@ -16,19 +16,19 @@ showToC: false
 
 ## Built With
 
-<a href='https://nuxtjs.org/' class='text-2xl'><tnt-simple-icon icon='nuxtdotjs'></tnt-simple-icon> Nuxt.js</a>
+<a href='https://nuxtjs.org/' class='text-2xl'><rock-band-simple-icon icon='nuxtdotjs'></rock-band-simple-icon> Nuxt.js</a>
 <br class='inline md:hidden'/><span class='hidden md:inline'>&emsp;</span>
-<a href='https://tailwindcss.com/' class='text-2xl'><tnt-simple-icon icon='tailwindcss'></tnt-simple-icon> Tailwind CSS</a>
+<a href='https://tailwindcss.com/' class='text-2xl'><rock-band-simple-icon icon='tailwindcss'></rock-band-simple-icon> Tailwind CSS</a>
 
 <br/>
 <br/>
 
 ## Fonts
 
-<a href='https://fontawesome.com/'><tnt-simple-icon icon='fontawesome'></tnt-simple-icon> Font Awesome</a>
+<a href='https://fontawesome.com/'><rock-band-simple-icon icon='fontawesome'></rock-band-simple-icon> Font Awesome</a>
 <br class='inline md:hidden'/><span class='hidden md:inline'>&emsp;</span>
-<a href='https://simpleicons.org/'><tnt-simple-icon icon='simpleicons'></tnt-simple-icon> Simple Icons</a>
+<a href='https://simpleicons.org/'><rock-band-simple-icon icon='simpleicons'></rock-band-simple-icon> Simple Icons</a>
 
 ## Hosting
 
-<a href='https://github.com/' class='text-2xl font-light'><tnt-simple-icon icon='github'></tnt-simple-icon> GitHub</a>
+<a href='https://github.com/' class='text-2xl font-light'><rock-band-simple-icon icon='github'></rock-band-simple-icon> GitHub</a>

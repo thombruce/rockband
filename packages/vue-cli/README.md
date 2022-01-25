@@ -1,3 +1,3 @@
-# Vue CLI TNT
+# Vue CLI RockBand
 
-vue-cli plugin to add TNT with Pug and TailwindCSS
+vue-cli plugin to add RockBand with Pug and TailwindCSS
