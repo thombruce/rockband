@@ -1,0 +1,33 @@
+/*
+  NOTE: This file will become redundant when we port to Nuxt 3
+  The styles here are an incomplete translation of styles found
+  in the Tailwind Typography project compatible with Tailwind 3.
+*/
+
+.dark .prose {
+  @apply text-gray-300;
+
+  & h1, & h2, & h3, & h4, & h5, & h6, & a, & strong, & b, & code {
+    @apply text-white;
+  }
+
+  & blockquote {
+    @apply text-gray-100 border-gray-700;
+  }
+
+  & thead {
+    @apply text-gray-100 border-gray-600;
+  }
+
+  & hr, & tbody tr {
+    @apply border-gray-700;
+  }
+
+  &ol li::before {
+    @apply text-gray-400;
+  }
+
+  & ul li::before {
+    @apply bg-gray-600;
+  }
+}
