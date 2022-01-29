@@ -63,6 +63,12 @@ export default async function () {
   }
   await this.addModule('@nuxtjs/tailwindcss')
 
+  const rockbandConfig = fs.existsSync('rockband.config.js') ? nuxt.resolver.requireModule(nuxt.resolver.resolveAlias('rockband.config.js')) : {}
+  nuxt.options.head = {
+    ...nuxt.options.head,
+    ...(rockbandConfig.title ? { title: rockbandConfig.title } : {}),
+  }
+
   this.addPlugin({
     src: resolve(__dirname, 'plugins/rockband.js')
   })
