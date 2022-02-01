@@ -1,6 +1,6 @@
 {
   "name": "@rockband/nuxt",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "My personal component library for Nuxt.js",
   "main": "src/index.js",
   "style": "src/assets/rockband.css",
