@@ -7,13 +7,13 @@ div
       span.text-gray-500(class="sm:text-sm")
         slot(name='prefix')
 
-    input(
+    input.block.w-full.border-gray-300.rounded-md(
       v-bind:value='value'
       v-on:input='$emit(`input`, $event.target.value)'
       :id="id"
       :type="type"
       :name="id"
-      class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md"
+      :class="'focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm' + ($slots.prefix ? ' pl-7' : '') + ($slots.suffix ? ' pr-12' : '')"
       :placeholder='placeholder'
       :min='min'
       :step='step'
