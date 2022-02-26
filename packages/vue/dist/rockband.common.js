@@ -394,6 +394,390 @@ function _objectSpread2(target) {
 // EXTERNAL MODULE: /Users/thombruce/Developer/thombruce/rockband/node_modules/vue-meta/dist/vue-meta.esm.js
 var vue_meta_esm = __webpack_require__("fb1b");
 
+// CONCATENATED MODULE: /Users/thombruce/Developer/thombruce/rockband/node_modules/@vue-a11y/dark-mode/dist/vue-dark-mode.esm.js
+var storage = function (storage) {
+  return {
+    getItem: function (key) { return window[storage].getItem(key); },
+    setItem: function (key, value) { return window[storage].setItem(key, value); }
+  }
+};
+
+function getMediaQueryList (type) {
+  return window.matchMedia(("(prefers-color-scheme: " + type + ")"))
+}
+
+//
+
+var script = {
+  name: 'DarkMode',
+
+  props: {
+    defaultMode: {
+      type: String,
+      default: 'light'
+    },
+    modes: {
+      type: Array,
+      default: function default$1 () {
+        return ['light', 'dark', 'system']
+      }
+    },
+    className: {
+      type: String,
+      validator: function (str) { return str.includes('%cm'); },
+      default: '%cm-mode'
+    },
+    storage: {
+      type: [String, Object],
+      validator: function (storage) {
+        if (typeof storage === 'string') { return ['localStorage', 'sessionStorage'].includes(storage) }
+        return Object.keys(storage).every(function (key) { return ['getItem', 'setItem'].includes(key); })
+      },
+      default: 'localStorage'
+    },
+    metaThemeColor: {
+      type: Object,
+      default: function () { return ({}); }
+    },
+    ariaLabel: {
+      type: String,
+      validator: function (str) { return str.includes('%cm'); },
+      default: 'toggle to %cm mode color'
+    },
+    ariaLive: {
+      type: String,
+      validator: function (str) { return str.includes('%cm'); },
+      default: '%cm color mode is enabled'
+    },
+    favicon: {
+      type: [String, Boolean],
+      default: 'link[rel="icon"]'
+    }
+  },
+
+  data: function data () {
+    return {
+      chosenMode: null,
+      currentMode: null,
+      listenerDark: null,
+      metaThemeColorElement: null
+    }
+  },
+
+  computed: {
+    getPrefersColorScheme: function getPrefersColorScheme () {
+      if (this.$isServer) { return this.getStorage.getItem('colorModePrefer') }
+      var colorSchemeTypes = ['dark', 'light'];
+      var colorScheme = null;
+      colorSchemeTypes.forEach(function (type) {
+        if (getMediaQueryList(type).matches) {
+          colorScheme = type;
+        }
+      });
+      return colorScheme
+    },
+
+    getAriaLabel: function getAriaLabel () {
+      return this.ariaLabel.replace(/%cm/g, this.getNextMode)
+    },
+
+    getAriaLive: function getAriaLive () {
+      return this.ariaLive.replace(/%cm/g, this.chosenMode)
+    },
+
+    getNextMode: function getNextMode () {
+      var this$1 = this;
+
+      var currentIndex = this.modes.findIndex(function (mode) { return mode === this$1.chosenMode; });
+      return this.modes[currentIndex === (this.modes.length - 1) ? 0 : currentIndex + 1]
+    },
+
+    getStorage: function getStorage () {
+      if (typeof this.storage !== 'string') { return this.storage }
+      if (this.$isServer) { return false }
+      return storage(this.storage)
+    },
+
+    getStorageColorMode: function getStorageColorMode () {
+      if (!this.getStorage) { return this.defaultMode }
+      return this.getStorage.getItem('colorMode')
+    },
+
+    isSystem: function isSystem () {
+      return this.getStorageColorMode === 'system'
+    }
+  },
+
+  watch: {
+    defaultMode: 'handleSetMode'
+  },
+
+  created: function created () {
+    if (this.getPrefersColorScheme && this.isSystem) {
+      this.currentMode = this.getPrefersColorScheme;
+      return this.setMode('system')
+    }
+    var colorMode = this.getStorageColorMode || this.defaultMode;
+    this.currentMode = colorMode;
+    this.setMode(colorMode);
+  },
+
+  mounted: function mounted () {
+    this.metaThemeColorElement = document.querySelector('meta[name="theme-color"]');
+    this.listenerDark = getMediaQueryList('dark');
+    this.listenerDark.addListener(this.handlePreferColorScheme);
+    this.toggleFavicon(this.getPrefersColorScheme);
+  },
+
+  beforeDestroy: function beforeDestroy () {
+    this.listenerDark.removeListener(this.handlePreferColorScheme);
+  },
+
+  methods: {
+    setMode: function setMode (chosenMode) {
+      this.chosenMode = chosenMode;
+      if (this.getStorage) {
+        this.getStorage.setItem('colorMode', this.chosenMode);
+        if (this.chosenMode === 'system') { this.getStorage.setItem('colorModePrefer', this.getPrefersColorScheme); }
+      }
+      this.handleColorModeClass('add');
+      if (Object.keys(this.metaThemeColor).length) { this.setMetaThemeColor(this.metaThemeColor[this.currentMode] || this.metaThemeColor[this.getPrefersColorScheme]); }
+      this.$emit('change-mode', this.chosenMode);
+    },
+
+    setMetaThemeColor: function setMetaThemeColor (color) {
+      var this$1 = this;
+
+      if (color) {
+        this.$nextTick(function () {
+          if (this$1.metaThemeColorElement) { this$1.metaThemeColorElement.setAttribute('content', color); }
+        });
+      }
+    },
+
+    toggleFavicon: function toggleFavicon (mode) {
+      var this$1 = this;
+
+      if (!this.favicon) { return }
+      this.$nextTick(function () {
+        var favicon = document.querySelector(this$1.favicon);
+        if (!favicon) { return }
+        var href = favicon.getAttribute('href');
+        var lastFour = href.substr(-4, 4);
+        var favDarkStr = "-dark" + lastFour;
+        favicon.setAttribute('href', mode === 'light' ? href.replace(favDarkStr, lastFour) : href.replace(lastFour, favDarkStr));
+      });
+    },
+
+    handleColorModeClass: function handleColorModeClass (action) {
+      var className = "" + (this.className.replace(/%cm/g, this.currentMode));
+      if (!this.$isServer) { return document.documentElement.classList[action](className) }
+      this.$ssrContext.colorModeClass = this.currentMode === 'system' ? ("" + (this.className.replace(/%cm/g, this.getPrefersColorScheme))) : className; // Adds the className in the ssr context for the user to insert as they wish in the HTML tag
+    },
+
+    handlePreferColorScheme: function handlePreferColorScheme (e) {
+      var colorMatch = e.matches ? 'dark' : 'light';
+      this.toggleFavicon(colorMatch);
+      if (this.isSystem) {
+        this.handleColorModeClass('remove');
+        this.currentMode = colorMatch;
+        this.setMode('system');
+      }
+    },
+
+    toggleColorMode: function toggleColorMode () {
+      var selectedMode = this.getNextMode;
+      this.handleSetMode(selectedMode);
+    },
+
+    handleSetMode: function handleSetMode (selectedMode) {
+      this.handleColorModeClass('remove');
+      this.currentMode = selectedMode === 'system' ? this.getPrefersColorScheme : selectedMode;
+      this.setMode(selectedMode);
+    }
+  }
+};
+
+function normalizeComponent(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier /* server only */, shadowMode, createInjector, createInjectorSSR, createInjectorShadow) {
+    if (typeof shadowMode !== 'boolean') {
+        createInjectorSSR = createInjector;
+        createInjector = shadowMode;
+        shadowMode = false;
+    }
+    // Vue.extend constructor export interop.
+    var options = typeof script === 'function' ? script.options : script;
+    // render functions
+    if (template && template.render) {
+        options.render = template.render;
+        options.staticRenderFns = template.staticRenderFns;
+        options._compiled = true;
+        // functional template
+        if (isFunctionalTemplate) {
+            options.functional = true;
+        }
+    }
+    // scopedId
+    if (scopeId) {
+        options._scopeId = scopeId;
+    }
+    var hook;
+    if (moduleIdentifier) {
+        // server build
+        hook = function (context) {
+            // 2.3 injection
+            context =
+                context || // cached call
+                    (this.$vnode && this.$vnode.ssrContext) || // stateful
+                    (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext); // functional
+            // 2.2 with runInNewContext: true
+            if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+                context = __VUE_SSR_CONTEXT__;
+            }
+            // inject component styles
+            if (style) {
+                style.call(this, createInjectorSSR(context));
+            }
+            // register component module identifier for async chunk inference
+            if (context && context._registeredComponents) {
+                context._registeredComponents.add(moduleIdentifier);
+            }
+        };
+        // used by ssr in case component is cached and beforeCreate
+        // never gets called
+        options._ssrRegister = hook;
+    }
+    else if (style) {
+        hook = shadowMode
+            ? function (context) {
+                style.call(this, createInjectorShadow(context, this.$root.$options.shadowRoot));
+            }
+            : function (context) {
+                style.call(this, createInjector(context));
+            };
+    }
+    if (hook) {
+        if (options.functional) {
+            // register for functional component in vue file
+            var originalRender = options.render;
+            options.render = function renderWithStyleInjection(h, context) {
+                hook.call(context);
+                return originalRender(h, context);
+            };
+        }
+        else {
+            // inject component registration as beforeCreate hook
+            var existing = options.beforeCreate;
+            options.beforeCreate = existing ? [].concat(existing, hook) : [hook];
+        }
+    }
+    return script;
+}
+
+var isOldIE = typeof navigator !== 'undefined' &&
+    /msie [6-9]\\b/.test(navigator.userAgent.toLowerCase());
+function createInjector(context) {
+    return function (id, style) { return addStyle(id, style); };
+}
+var HEAD;
+var styles = {};
+function addStyle(id, css) {
+    var group = isOldIE ? css.media || 'default' : id;
+    var style = styles[group] || (styles[group] = { ids: new Set(), styles: [] });
+    if (!style.ids.has(id)) {
+        style.ids.add(id);
+        var code = css.source;
+        if (css.map) {
+            // https://developer.chrome.com/devtools/docs/javascript-debugging
+            // this makes source maps inside style tags work properly in Chrome
+            code += '\n/*# sourceURL=' + css.map.sources[0] + ' */';
+            // http://stackoverflow.com/a/26603875
+            code +=
+                '\n/*# sourceMappingURL=data:application/json;base64,' +
+                    btoa(unescape(encodeURIComponent(JSON.stringify(css.map)))) +
+                    ' */';
+        }
+        if (!style.element) {
+            style.element = document.createElement('style');
+            style.element.type = 'text/css';
+            if (css.media)
+                { style.element.setAttribute('media', css.media); }
+            if (HEAD === undefined) {
+                HEAD = document.head || document.getElementsByTagName('head')[0];
+            }
+            HEAD.appendChild(style.element);
+        }
+        if ('styleSheet' in style.element) {
+            style.styles.push(code);
+            style.element.styleSheet.cssText = style.styles
+                .filter(Boolean)
+                .join('\n');
+        }
+        else {
+            var index = style.ids.size - 1;
+            var textNode = document.createTextNode(code);
+            var nodes = style.element.childNodes;
+            if (nodes[index])
+                { style.element.removeChild(nodes[index]); }
+            if (nodes.length)
+                { style.element.insertBefore(textNode, nodes[index]); }
+            else
+                { style.element.appendChild(textNode); }
+        }
+    }
+}
+
+/* script */
+var __vue_script__ = script;
+
+/* template */
+var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',{staticClass:"vue-dark-mode",attrs:{"aria-label":_vm.getAriaLabel},on:{"click":_vm.toggleColorMode}},[_c('span',{staticClass:"visually-hidden",attrs:{"aria-live":"assertive"},domProps:{"textContent":_vm._s(_vm.getAriaLive)}}),_vm._v(" "),_vm._t("default",null,{"mode":_vm.chosenMode})],2)};
+var __vue_staticRenderFns__ = [];
+
+  /* style */
+  var __vue_inject_styles__ = function (inject) {
+    if (!inject) { return }
+    inject("data-v-672b35f8_0", { source: ".vue-dark-mode{appearance:none;-webkit-appearance:none;-moz-appearance:none;background-color:transparent;color:inherit;border:none;cursor:pointer}.visually-hidden{position:absolute;white-space:nowrap;width:1px;height:1px;overflow:hidden;border:0;padding:0;clip:rect(0 0 0 0);clip-path:inset(50%);margin:-1px}", map: undefined, media: undefined });
+
+  };
+  /* scoped */
+  var __vue_scope_id__ = undefined;
+  /* module identifier */
+  var __vue_module_identifier__ = undefined;
+  /* functional template */
+  var __vue_is_functional_template__ = false;
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  var __vue_component__ = normalizeComponent(
+    { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
+    __vue_inject_styles__,
+    __vue_script__,
+    __vue_scope_id__,
+    __vue_is_functional_template__,
+    __vue_module_identifier__,
+    false,
+    createInjector,
+    undefined,
+    undefined
+  );
+
+function vue_dark_mode_esm_install (Vue) {
+  if (vue_dark_mode_esm_install.installed) { return }
+  vue_dark_mode_esm_install.installed = true;
+  Vue.component('DarkMode', __vue_component__);
+}
+
+// auto install
+if (typeof window !== 'undefined' && typeof window.Vue !== 'undefined') {
+  window.Vue.use(vue_dark_mode_esm_install);
+}
+
+/* harmony default export */ var vue_dark_mode_esm = (vue_dark_mode_esm_install);
+
+
 // EXTERNAL MODULE: ./src/assets/index.css
 var assets = __webpack_require__("d940");
 
@@ -401,6 +785,7 @@ var assets = __webpack_require__("d940");
 var index_es = __webpack_require__("dc04");
 
 // CONCATENATED MODULE: ./src/index.js
+
 
 
 
@@ -415,6 +800,7 @@ var index_es = __webpack_require__("dc04");
       Vue.use(vue_meta_esm["a" /* default */]);
     }
 
+    Vue.use(vue_dark_mode_esm);
     Vue.component(options.iconComponent, index_es["a" /* FontAwesomeIcon */]);
   }
 });

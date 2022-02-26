@@ -1,6 +1,6 @@
 <template lang='pug'>
-select(v-model='$colorMode.preference')
-  option(value='system') System
-  option(value='light') Light
-  option(value='dark') Dark
+ClientOnly
+  DarkMode(defaultMode='light' className='%cm')
+    template(v-slot="{ mode }")
+      | Color mode: {{ mode | titleize }}
 </template>
