@@ -1,6 +1,6 @@
 {
   "name": "@rockband/vue-cli-plugin-ui",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "vue-cli plugin to add RockBand with Pug and TailwindCSS",
   "main": "index.js",
   "repository": "https://github.com/thombruce/rockband",
@@ -10,7 +10,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@rockband/vue": "^0.9.0",
+    "@rockband/vue": "^0.9.1",
     "pug-plain-loader": "^1.1.0",
     "raw-loader": "^4.0.2"
   }

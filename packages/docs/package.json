@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -9,7 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@rockband/nuxt": "^0.9.0",
+    "@rockband/nuxt": "^0.9.1",
     "core-js": "^3.16.2",
     "nuxt": "^2.15.8"
   }
