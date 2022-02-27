@@ -1,4 +1,4 @@
-import { join, resolve } from 'path'
+import { dirname, join, resolve } from 'path'
 
 import fs from 'fs'
 
@@ -91,11 +91,18 @@ export default async function () {
 
   this.nuxt.hook("components:dirs", (dirs) => {
     // Add ./components dir to the list
-    dirs.push({
-      path: join(__dirname, "components"),
-      prefix: "RockBand",
-      level: 1
-    })
+    dirs.push.apply(dirs, [
+      {
+        path: join(__dirname, "components"),
+        prefix: "RockBand",
+        level: 1
+      },
+      {
+        path: dirname(require.resolve("@rockband/vue/src/components/index.js")),
+        prefix: "RockBand",
+        level: 2
+      }
+    ])
   })
 
   // Currently broken - cannot load components.

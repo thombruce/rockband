@@ -1,6 +1,14 @@
 <template lang='pug'>
 ClientOnly
-  DarkMode(defaultMode='light' className='%cm')
-    template(v-slot="{ mode }")
-      | Color mode: {{ mode | titleize }}
+  VueUIThemeToggle
 </template>
+
+<script>
+import VueUIThemeToggle from '@rockband/vue/src/components/UI/ThemeToggle.vue'
+
+export default {
+  components: {
+    VueUIThemeToggle
+  }
+}
+</script>
