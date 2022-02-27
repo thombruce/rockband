@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a){return {staticAssetsBase:"\u002Frockband\u002F_nuxt\u002Fstatic\u002F1645955873",layout:"default",error:a,serverRendered:true,routePath:"\u002Fgetting-started\u002Fconfiguration",config:{_app:{basePath:"\u002Frockband\u002F",assetsPath:"\u002Frockband\u002F_nuxt\u002F",cdnURL:a},content:{dbHash:"bd9f2882"}}}}(null));
